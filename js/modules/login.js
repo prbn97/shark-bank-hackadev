@@ -23,3 +23,9 @@ function entrar() {
         }
     }
 }
+
+describe('test login', function() {
+    it('test login.entrar', function(done) {
+        let result = login.entrar();
+    })
+})
