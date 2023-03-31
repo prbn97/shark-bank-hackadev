@@ -1,22 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import './assets/styles/baby-logo.css';
 import './App.css';
+import babieLogo from './assets/images/baby-logo.png';
+import './shark.css'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <img src={babieLogo} className="baby-logo" alt="logo" />
+        <h3>
+          Shark Bank, Mergulhe e descubra novas oportunidades!
+        </h3>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/LKSFerreira/sharp-coders-hackadev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Reposiório HackaDev Babies Sharp
         </a>
       </header>
     </div>
