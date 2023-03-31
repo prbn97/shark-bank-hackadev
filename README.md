@@ -14,9 +14,7 @@ Com o Hackadev, os participantes terão a oportunidade de vivenciar um ambiente 
 ### Integrandes do grupo:
 
  - [Mauricio Santana](https://github.com/mauriciomuniz)
- - [Guilherme Ribeiro](https://github.com/RIBEIROSLMB)
  - [Mário Igor Barbosa](https://github.com/migorking)
- - [Marcelo Furtado](https://github.com/marcelof1997)
  - [Juliana Rodrigues](https://github.com/Julianacris)
  - [Natasha Lima](https://github.com/NatashaLima)
  - [Pablo Rangel](https://github.com/pablorangell)
