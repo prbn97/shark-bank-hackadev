@@ -23,11 +23,6 @@ Com o Hackadev, os participantes terão a oportunidade de vivenciar um ambiente 
  - [Paulo Reis](https://github.com/prbn97)
  - [Thais Machado](https://github.com/machadothais)
 
-### IDE Visual Studio
-
-Para o desenvolvimento deste projeto utilizamos o Visual Studio por ser completo e poderoso, que oferece uma ampla gama de recursos e suporte para diversas linguagens de programação. É uma solução corporativa e abrangente que inclui ferramentas para depuração, testes, gerenciamento de versão, desenvolvimento web e desktop, entre outros.
-
-
 ### Metodologia Ágil
 
 Por oferecer uma grande eficiência, transparência e flexibilidade. A metodologia ágil adotada para o desenvolvimento desse projeto será utilizando framework Scrum. 
