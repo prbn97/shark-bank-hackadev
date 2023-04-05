@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Button() {
+export function ButtonCadastrar() {
     return (
         <Container type="button">
-            Acessar
+            Cadastrar
         </Container>
     );
 }
