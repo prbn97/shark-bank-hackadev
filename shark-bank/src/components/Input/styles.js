@@ -10,7 +10,7 @@ export const Container = styled.input`
     width: 295px;
     padding-left: 20px;
 
-    &:focus {
+    &:focus, {
         align-self: stretch;
         filter: drop-shadow(4px 5px 10px rgba(0, 0, 0, 0.6));
         flex-grow: 0;

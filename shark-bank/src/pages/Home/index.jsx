@@ -1,12 +1,6 @@
 import { Container } from './styles';
 import { Button } from '../../components/Button/Primario';
 import { Input } from '../../components/Input';
-import { ButtonAvancar } from '../../components/Button/Avancar';
-import { ButtonCadastrar } from '../../components/Button/Secundario';
-import { ButtonVoltar } from '../../components/Button/Voltar';
-import { ButtonRecuar } from '../../components/Button/Recuar';
-import { ButtonSair } from '../../components/Button/Sair';
-import { ButtonPix } from '../../components/Lobby/Pix';
 
 
 export function Home() {
@@ -20,13 +14,7 @@ export function Home() {
         <Input />
       </div>
 
-      <ButtonAvancar />
-      <ButtonCadastrar />
-      <ButtonVoltar />
-      <ButtonRecuar />
-      <ButtonSair />
-      <ButtonPix />
-
+      
     </Container>
   );
 }
