@@ -15,7 +15,6 @@ import { theme } from './styles/theme';
 import { Home } from './pages/Home';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<<<<<<< Updated upstream
   <React.StrictMode>
     {/* <ThemeProvider theme={theme}> */}
       {/* <GlobalStyle /> */}
@@ -28,16 +27,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PaginaLogin/>
     {/* </ThemeProvider> */}
   </React.StrictMode>,
-=======
-  // <React.StrictMode>
-  {/* <ThemeProvider theme={theme}> */ }
-      {/* <GlobalStyle /> */ }
-      {/* <Home /> */ }
-      {/* <Pix/> */ }
-      {/* <Pix2/> */ }
-      {/* <Transferencia/> */ }
-      {/* <Transferencia2/> */ }
-      {/* </ThemeProvider> */ }
-  {/* </React.StrictMode>, */ }
->>>>>>> Stashed changes
 ) 
