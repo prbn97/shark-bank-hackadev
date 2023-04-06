@@ -5,6 +5,7 @@ export const Container = styled.button`
     background: linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%);
     border-radius: 30px;
     border-style: none;
+    color: #101626;
     height: 48px;
     justify-content: center;
     gap: 8px;

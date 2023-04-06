@@ -6,9 +6,9 @@ export const Container = styled.button`
     border-radius: 30px;
     border-style: none;
     color: #FFFFFF;
-    gap: 8px;
     height: 48px;
     justify-content: center;
+    gap: 8px;
     padding: 8px;
     width: 168px;
 
