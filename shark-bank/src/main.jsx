@@ -6,7 +6,8 @@ import { Pix } from './pages/Transferencia/Pix/pix';
 import { Pix2 } from './pages/Transferencia/Pix/pix2';
 import { Transferencia} from './pages/Transferencia/Transferencia/transferencia';
 import { Transferencia2 } from './pages/Transferencia/Transferencia/transferencia2';
-import { Senha } from './pages/Transferencia/Senha/senha';
+import { PaginaLogin } from './pages/Acesso/login';
+// import { Senha } from './pages/Transferencia/Senha/senha';
 
 // import {theme} from './styles/theme';
 
@@ -22,7 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Pix2/> */}
       {/* <Transferencia/> */}
       {/* <Transferencia2/> */}
-      <Senha/>
+      {/* <Senha/> */}
+      <PaginaLogin/>
     {/* </ThemeProvider> */}
   </React.StrictMode>,
 ) 
