@@ -16,7 +16,9 @@ export function Pix() {
   }
   
   return (
-    <div className="App">
+    <div className="pixCampo">
+      <button>Voltar</button>
+        <br/>
       <h1>Qual é o valor do seu PIX?</h1>
       <p>Saldo disponível em conta:</p>
       {/* <p>{formatarSaldo(saldoConta)}</p> */}
@@ -25,7 +27,6 @@ export function Pix() {
       {/* <Link to="/outra-pagina"> */}
         <button>Próximo</button>
       {/* </Link> */}
-      
     </div>
     
   );
