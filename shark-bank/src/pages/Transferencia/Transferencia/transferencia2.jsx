@@ -5,7 +5,9 @@ export function Transferencia2() {
   const [campoAgencia, setCampoAgencia] = useState('');
   const [campoConta, setCampoConta] = useState('');
   return (
-    <div className="App">
+    <div className="transferencia2Campo">
+      <button>Voltar</button>
+        <br/>
       <h1>Para quem você quer transferir esse valor?</h1>
       <p>Encontre um contato na sua lista ou inicia uma nova transferência:</p>
       <span>Banco</span>
