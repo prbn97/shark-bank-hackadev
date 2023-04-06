@@ -16,7 +16,9 @@ export function Transferencia() {
   }
   
   return (
-    <div className="App">
+    <div className="transferenciaCampo">
+      <button>Voltar</button>
+        <br/>
       <h1>Qual é o valor da transferência?</h1>
       <p>Saldo disponível em conta:</p>
       {/* <p>{formatarSaldo(saldoConta)}</p> */}
