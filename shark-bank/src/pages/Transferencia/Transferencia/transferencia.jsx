@@ -16,10 +16,10 @@ export function Transferencia() {
   }
   
   return (
-    <div className="transferenciaCampo">
+    <div className="corpo">
       <button>Voltar</button>
         <br/>
-      <div className=''>
+      <div className='campo'>
       <h1>Qual é o valor da transferência?</h1>
       <p>Saldo disponível em conta:</p>
       {/* <p>{formatarSaldo(saldoConta)}</p> */}

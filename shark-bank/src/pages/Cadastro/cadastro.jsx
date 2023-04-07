@@ -25,9 +25,14 @@ export function Cadastro() {
   };
 
   return (
-    <div className="AchoQueCorpo">
-      <h1>Cadastro</h1>
-      <div className="AchoQueCampo">
+    <div className="corpo">
+      
+      <div className="user">
+        <h1>Cadastro</h1>
+
+      </div>
+      
+      <div className="campo">
         <form onSubmit={handleCadastro}>
           <label htmlFor="cpf">CPF:</label>
           <input

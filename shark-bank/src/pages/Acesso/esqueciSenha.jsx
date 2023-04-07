@@ -10,9 +10,13 @@ export function EsqueciSenha() {
   };
 
   return (
-    <div className="AchoQueCorpo">
-      <h1>Esqueci a senha</h1>
-      <div className="AchoQueCampo">
+    <div className="corpo">
+
+      <div className="user">
+        <h1>Esqueci a senha</h1>
+      </div>
+      
+      <div className="campo">
       <form onSubmit={handleSubmit}>
       <p>
         Para redefinir a sua senha, informe o e-mail cadastrado na sua conta e

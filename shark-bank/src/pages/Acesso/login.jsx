@@ -59,9 +59,12 @@ export function PaginaLogin() {
   }
 
   return (
-    <div className="AchoQueCorpo">
-      <h2>Acesso</h2>
-      <div>
+    <div className="corpo">
+      <div className="user">
+        <h2>Acesso</h2>
+      </div>
+      
+      <div className="campo">
       <label>
         CPF:
         <input type="text" value={cpf} onChange={handleCpfChange} />

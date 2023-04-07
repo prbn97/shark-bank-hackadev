@@ -16,18 +16,25 @@ export function Pix() {
   }
   
   return (
-    <div className="pixCampo">
+    <div className="corpo">
+      <div className='user'>
+          
+      </div>
       <button>Voltar</button>
         <br/>
-      <div className=''></div>
-      <h1>Qual é o valor do seu PIX?</h1>
-      <p>Saldo disponível em conta:</p>
-      {/* <p>{formatarSaldo(saldoConta)}</p> */}
-      <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
-      <br/>
-      {/* <Link to="/outra-pagina"> */}
-        <button>Próximo</button>
-      {/* </Link> */}
+      <div className='campo'>
+
+        <h1>Qual é o valor do seu PIX?</h1>
+        <p>Saldo disponível em conta:</p>
+        {/* <p>{formatarSaldo(saldoConta)}</p> */}
+        <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
+        <br/>
+        {/* <Link to="/outra-pagina"> */}
+          <button>Próximo</button>
+        {/* </Link> */}
+
+      </div>
+      
     </div>
     
   );

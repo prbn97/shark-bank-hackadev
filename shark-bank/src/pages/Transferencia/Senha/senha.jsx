@@ -22,10 +22,13 @@ export function Senha() {
   }
 
   return (
-    <div className="senhaCampo">
+    <div className="corpo">
+        <div className="user">
+
+        </div>
         <button>Voltar</button>
         <br/>
-        <div className="">
+        <div className="campo">
         <span>Digite a senha de 4 digitos do seu cartão</span>
         <br/>
       {digitos.map((digit, index) => (

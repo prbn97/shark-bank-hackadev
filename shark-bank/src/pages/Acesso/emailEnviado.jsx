@@ -3,9 +3,13 @@
 export function EmailEnviado() {
 
   return (
-    <div className="AchoQueCorpo">
-      <h1>Email enviado</h1>
-      <div className="AchoQueCampo">
+    <div className="corpo">
+
+      <div className="user">
+        <h1>Email enviado</h1>
+      </div>
+      
+      <div className="campo">
       
       <p>
       Foi enviado um e-mail para sua caixa de entrada, siga as instruções para a 
