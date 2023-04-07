@@ -25,6 +25,7 @@ export function Senha() {
     <div className="senhaCampo">
         <button>Voltar</button>
         <br/>
+        <div className="">
         <span>Digite a senha de 4 digitos do seu cartão</span>
         <br/>
       {digitos.map((digit, index) => (
@@ -38,6 +39,7 @@ export function Senha() {
       ))}
       <br/>
       <button onClick={handleNext}>Próximo</button>
+      </div>
     </div>
   );
 }
