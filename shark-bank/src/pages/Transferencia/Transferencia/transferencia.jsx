@@ -19,6 +19,7 @@ export function Transferencia() {
     <div className="transferenciaCampo">
       <button>Voltar</button>
         <br/>
+      <div className=''>
       <h1>Qual é o valor da transferência?</h1>
       <p>Saldo disponível em conta:</p>
       {/* <p>{formatarSaldo(saldoConta)}</p> */}
@@ -27,7 +28,7 @@ export function Transferencia() {
       {/* <Link to="/outra-pagina"> */}
         <button>Registrar</button>
       {/* </Link> */}
-      
+      </div>
     </div>
     
   );
