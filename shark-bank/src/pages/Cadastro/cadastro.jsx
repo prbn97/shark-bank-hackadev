@@ -18,7 +18,10 @@ export function Cadastro() {
 
     const userData = {
       cpf,
-      password
+      nomeCompleto,
+      celular,
+      email,
+      password,
     };
     localStorage.setItem("userData", JSON.stringify(userData));
     alert("Deu bom!");
