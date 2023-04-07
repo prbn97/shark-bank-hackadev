@@ -6,10 +6,10 @@ export function PaginaLogin() {
   const [remember, setRemember] = useState(false);
 
   // isso aqui só pra simular o localStorage mesmo
-  const userData = {
-    cpf: "123",
-    password: "123",
-  };
+  // const userData = {
+  //   cpf,
+  //   password
+  // };
 
   useEffect(() => {
     const storedData = localStorage.getItem("userData");
@@ -59,8 +59,9 @@ export function PaginaLogin() {
   }
 
   return (
-    <div>
+    <div className="AchoQueCorpo">
       <h2>Acesso</h2>
+      <div>
       <label>
         CPF:
         <input type="text" value={cpf} onChange={handleCpfChange} />
@@ -81,6 +82,7 @@ export function PaginaLogin() {
       <a>Esqueci a senha</a>
       <br/>
       <button onClick={handleAccess}>Acessar</button>
+      </div>
     </div>
   );
 }
