@@ -19,6 +19,7 @@ export function Pix() {
     <div className="pixCampo">
       <button>Voltar</button>
         <br/>
+      <div className=''></div>
       <h1>Qual é o valor do seu PIX?</h1>
       <p>Saldo disponível em conta:</p>
       {/* <p>{formatarSaldo(saldoConta)}</p> */}
