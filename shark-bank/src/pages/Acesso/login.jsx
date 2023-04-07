@@ -5,14 +5,10 @@ export function PaginaLogin() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-  // isso aqui só pra simular o localStorage mesmo
-  // const userData = {
-  //   cpf,
-  //   password
-  // };
+  const rememberKey = "rememberData"
 
   useEffect(() => {
-    const storedData = localStorage.getItem("userData");
+    const storedData = localStorage.getItem("rememberData");
     if (storedData) {
       const parsedData = JSON.parse(storedData);
       setCpf(parsedData.cpf);
@@ -44,7 +40,7 @@ export function PaginaLogin() {
         alert("Login efetuado com sucesso!");
         if (remember) {
           localStorage.setItem(
-            "userData",
+            rememberKey,
             JSON.stringify({ cpf, password })
           );
         } else {
