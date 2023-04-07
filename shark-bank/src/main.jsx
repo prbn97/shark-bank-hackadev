@@ -11,6 +11,7 @@ import { EsqueciSenha } from './pages/Acesso/esqueciSenha';
 import { Senha } from './pages/Transferencia/Senha/senha';
 import { EmailEnviado } from './pages/Acesso/emailEnviado';
 import { Cadastro } from './pages/Cadastro/cadastro';
+import { Registro } from './pages/Cadastro/registro';
 
 // import { theme } from './styles/theme';
 
@@ -30,7 +31,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <PaginaLogin/> */}
       {/* <EsqueciSenha/> */}
       {/* <EmailEnviado/> */}
-      <Cadastro/>
+      {/* <Cadastro/> */}
+      <Registro/>
     {/* </ThemeProvider> */}
   </React.StrictMode>,
 ) 
