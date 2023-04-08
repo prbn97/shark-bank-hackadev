@@ -28,8 +28,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Home /> */}
       {/* <Pix/> */}
       {/* <Pix2/> */}
-      <Transferencia/>
-      {/* <Transferencia2/> */}
+      {/* <Transferencia/> */}
+      <Transferencia2/>
       {/* <TransferenciaRealizada/> */}
       {/* <Senha/> */}
       {/* <PaginaLogin/> */}

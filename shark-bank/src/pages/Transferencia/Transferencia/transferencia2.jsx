@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ButtonRecuar } from '../../../components/Button/Recuar';
+import { ButtonAvancar } from '../../../components/Button/Avancar';
 
 export function Transferencia2() {
   const [campoBanco, setCampoBanco] = useState('');
@@ -7,7 +9,7 @@ export function Transferencia2() {
 
   return (
     <div className="corpo">
-      <button>Voltar</button>
+      <ButtonRecuar/>      
         <br/>
        <div className='campo'>
         <h1>Para quem você quer transferir esse valor?</h1>
@@ -20,7 +22,7 @@ export function Transferencia2() {
         <input type="text" value={campoAgencia} onChange={(event) => setCampoAgencia(event.target.value)} />
         <input type="text" value={campoConta} onChange={(event) => setCampoConta(event.target.value)} />
         <br/>
-        <button>Registrar</button>
+        <ButtonAvancar/>       
       </div> 
     </div>
   );
