@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ButtonRecuar } from '../../../components/Button/Recuar';
+import { ButtonAvancar } from '../../../components/Button/Avancar';
 // import { Link } from 'react-router-dom';
 
 export function Transferencia() {
@@ -17,7 +19,8 @@ export function Transferencia() {
   
   return (
     <div className="corpo">
-      <button>Voltar</button>
+      <ButtonRecuar/>
+      
         <br/>
       <div className='campo'>
       <h1>Qual é o valor da transferência?</h1>
@@ -26,7 +29,8 @@ export function Transferencia() {
       <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
       <br/>
       {/* <Link to="/outra-pagina"> */}
-        <button>Registrar</button>
+        <ButtonAvancar/>
+        
       {/* </Link> */}
       </div>
     </div>
