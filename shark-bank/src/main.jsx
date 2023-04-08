@@ -26,8 +26,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <ThemeProvider theme={theme}> 
        <GlobalStyle /> 
       {/* <Home /> */}
-      <Pix/>
-      {/* <Pix2/> */}
+      {/* <Pix/> */}
+      <Pix2/>
       {/* <Transferencia/> */}
       {/* <Transferencia2/> */}
       {/* <TransferenciaRealizada/> */}
