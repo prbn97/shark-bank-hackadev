@@ -12,7 +12,7 @@ import { Senha } from './pages/Transferencia/Senha/senha';
 import { EmailEnviado } from './pages/Acesso/emailEnviado';
 import { Cadastro } from './pages/Cadastro/cadastro';
 import { Registro } from './pages/Cadastro/registro';
-
+import { TermoDeAceitacao } from './pages/Cadastro/termos';
 // import { theme } from './styles/theme';
 
 //Importação nomeada deixa a importação fortemente tipada, ou seja, se o nome do componente for alterado, o import não irá funcionar
@@ -32,7 +32,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <EsqueciSenha/> */}
       {/* <EmailEnviado/> */}
       {/* <Cadastro/> */}
-      <Registro/>
+      {/* <Registro/> */}
+      <TermoDeAceitacao/>
     {/* </ThemeProvider> */}
   </React.StrictMode>,
 ) 
