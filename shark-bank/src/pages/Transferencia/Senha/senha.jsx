@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import { ButtonRecuar } from "../../../components/Button/Recuar";
+import { ButtonAvancar } from "../../../components/Button/Avancar";
 
 //falta css e estilizar 
 export function Senha() {
@@ -26,7 +28,8 @@ export function Senha() {
         <div className="user">
 
         </div>
-        <button>Voltar</button>
+        <ButtonRecuar/>
+        
         <br/>
         <div className="campo">
         <span>Digite a senha de 4 digitos do seu cartão</span>
@@ -41,6 +44,7 @@ export function Senha() {
         />
       ))}
       <br/>
+      <ButtonAvancar/>
       <button onClick={handleNext}>Próximo</button>
       </div>
     </div>

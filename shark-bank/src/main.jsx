@@ -29,9 +29,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Pix/> */}
       {/* <Pix2/> */}
       {/* <Transferencia/> */}
-      <Transferencia2/>
+      {/* <Transferencia2/> */}
       {/* <TransferenciaRealizada/> */}
-      {/* <Senha/> */}
+      <Senha/>
       {/* <PaginaLogin/> */}
       {/* <EsqueciSenha/> */}
       {/* <EmailEnviado/> */}
