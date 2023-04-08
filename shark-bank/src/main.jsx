@@ -26,11 +26,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <ThemeProvider theme={theme}> 
        <GlobalStyle /> 
       {/* <Home /> */}
-      {/* <Pix/> */}
+      <Pix/>
       {/* <Pix2/> */}
       {/* <Transferencia/> */}
       {/* <Transferencia2/> */}
-      <TransferenciaRealizada/>
+      {/* <TransferenciaRealizada/> */}
       {/* <Senha/> */}
       {/* <PaginaLogin/> */}
       {/* <EsqueciSenha/> */}

@@ -8,7 +8,7 @@ export function TransferenciaRealizada(){
     return(
         <div>
             <div>
-            <ButtonSair></ButtonSair>
+            <ButtonSair/>
             </div>
             
             <div>
@@ -20,7 +20,7 @@ export function TransferenciaRealizada(){
                 </div>
             </div>
 
-            <ButtonAvancar></ButtonAvancar>
+            <ButtonAvancar/>
 
         </div>
         

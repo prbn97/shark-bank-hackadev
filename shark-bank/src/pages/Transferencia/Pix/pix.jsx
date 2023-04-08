@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { ButtonRecuar } from '../../../components/Button/Recuar';
+import { ButtonAvancar } from '../../../components/Button/Avancar';
+import { Input } from '../../../components/Input';
 // import { Link } from 'react-router-dom';
 
 export function Pix() {
@@ -20,17 +23,20 @@ export function Pix() {
       <div className='user'>
           
       </div>
-      <button>Voltar</button>
+      <ButtonRecuar/>
+      
         <br/>
       <div className='campo'>
 
         <h1>Qual é o valor do seu PIX?</h1>
         <p>Saldo disponível em conta:</p>
         {/* <p>{formatarSaldo(saldoConta)}</p> */}
+        
         <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
         <br/>
         {/* <Link to="/outra-pagina"> */}
-          <button>Próximo</button>
+          <ButtonAvancar/>
+          
         {/* </Link> */}
 
       </div>
