@@ -6,6 +6,9 @@ import { ButtonCadastrar } from '../../components/Button/Secundario';
 import { ButtonRecuar } from '../../components/Button/Recuar';
 import { ButtonSair } from '../../components/Button/Sair';
 import { ButtonPix } from '../../components/Lobby/Pix';
+import Bateria from '../../assets/bateria.png'
+
+
 
 
 export function Home() {
@@ -33,7 +36,10 @@ export function Home() {
       <ButtonSair />
       <ButtonPix />
 
+      
       // MEU MIC NÃO ESTÁ ATIVADO
+
+      <img src={Bateria} alt="imagem do das informações de bateria e sinal do celular" />
 
     </Container>
   );
