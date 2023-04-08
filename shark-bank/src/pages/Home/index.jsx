@@ -7,9 +7,8 @@ import { ButtonRecuar } from '../../components/Button/Recuar';
 import { ButtonSair } from '../../components/Button/Sair';
 import { ButtonPix } from '../../components/Lobby/Pix';
 import Bateria from '../../assets/bateria.png'
-
-
-
+import { Link } from 'react-router-dom';
+import { ButtonDummy } from '../../components/Button/DummyButton';
 
 export function Home() {
   return (
@@ -31,7 +30,12 @@ export function Home() {
       </div>
 
       <ButtonAvancar />
-      <ButtonCadastrar />
+      <ButtonCadastrar /> 
+      
+      <Link to='/dummy'>
+        <ButtonDummy />
+      </Link>
+      
       <ButtonRecuar />
       <ButtonSair />
       <ButtonPix />
