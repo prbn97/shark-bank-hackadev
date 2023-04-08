@@ -31,8 +31,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Transferencia/> */}
       {/* <Transferencia2/> */}
       {/* <TransferenciaRealizada/> */}
-      <Senha/>
-      {/* <PaginaLogin/> */}
+      {/* <Senha/> */}
+      <PaginaLogin/>
       {/* <EsqueciSenha/> */}
       {/* <EmailEnviado/> */}
       {/* <Cadastro/> */}

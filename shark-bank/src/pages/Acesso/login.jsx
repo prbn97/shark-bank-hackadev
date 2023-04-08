@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { Button } from "../../components/Button";
+
 export function PaginaLogin() {
   const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
@@ -80,7 +82,8 @@ export function PaginaLogin() {
       por hora é isso*/}
       <a>Esqueci a senha</a>
       <br/>
-      <button onClick={handleAccess}>Acessar</button>
+      <Button titulo="Acessar"/>
+      {/* <button onClick={handleAccess}>Acessar</button> */}
       </div>
     </div>
   );
