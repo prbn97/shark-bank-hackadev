@@ -3,6 +3,7 @@ import { ButtonAvancar } from "../../../components/Button/Avancar";
 import happyshark from "../../../assets/happyshark.png"
 import { Link } from 'react-router-dom';
 import Bateria from '../../../assets/bateria.png'
+import { Button } from "../../../components/Button";
 
 export function TransferenciaRealizada(){
 
@@ -28,11 +29,14 @@ export function TransferenciaRealizada(){
                         </div>
 
                     </div>
+
                 </fieldset>
 
-                <div className='botaoAvancar'>
+                 <div className='botaoFinalizar'>
                     <Link to="/principal">
-                        <ButtonAvancar/>
+                        
+                         <Button titulo= 'Finalizar'/>
+                            
                     </Link>
                 </div>
             </div>

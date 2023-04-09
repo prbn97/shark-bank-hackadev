@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 import { Button } from "../../components/Button";
+import Bateria from '../../assets/bateria.png'
 
 export function PaginaLogin() {
   const [cpf, setCpf] = useState("");
@@ -59,36 +60,46 @@ export function PaginaLogin() {
 
   return (
     <div className="corpo">
+
+      <img src={Bateria} alt="imagem da bateria do celular" />
+
       <div className="user">
         <h2>Acesso</h2>
       </div>
+
       
       <div className="campo">
-      <label>
-        CPF:
-        <input type="text" value={cpf} onChange={handleCpfChange} />
-      </label>
-      <br />
-      <label>
-        Senha:
-        <input type="password" value={password} onChange={handlePasswordChange} />
-      </label>
-      <br />
-      <label>
-        <input type="checkbox" checked={remember} onChange={handleRememberChange} />
-        Lembrar-me
-      </label>
-    
-      <Link to="/esquecisenha">
-        <a>Esqueci a senha</a>
-      </Link>
-      
-      <br/>
-      <Link to="/principal">
-        <Button titulo="Acessar" onClick={handleAccess}/>
-      </Link>
-      
-      {/* <button onClick={handleAccess}>Acessar</button> */}
+        <fieldset id="fields-set">
+
+          <div >
+            <label>
+              <p className='inputNome'>CPF:</p>
+              <input className='input' type="text" value={cpf} onChange={handleCpfChange} />
+            </label>
+          </div>
+
+
+          <br />
+          <label>
+            Senha:
+            <input type="password" value={password} onChange={handlePasswordChange} />
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" checked={remember} onChange={handleRememberChange} />
+            Lembrar-me
+          </label>
+        
+          <Link to="/esquecisenha">
+            <a>Esqueci a senha</a>
+          </Link>
+        </fieldset>
+        <br/>
+        <Link to="/principal">
+          <Button titulo="Acessar" onClick={handleAccess}/>
+        </Link>
+        
+        {/* <button onClick={handleAccess}>Acessar</button> */}
       </div>
     </div>
   );
