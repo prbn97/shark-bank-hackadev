@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function Registro() {
   const [cep, setCep] = useState("");
@@ -80,7 +81,10 @@ export function Registro() {
           <input type="text" value={bairro} onChange={handleBairroChange} />
         </label>
       </div>
-      <button onClick={handleRegistrarClick}>Registrar</button>
+      <Link to="/login">
+          <button onClick={handleRegistrarClick}>Registrar</button>
+      </Link>
+      
     </div>
   );
 }

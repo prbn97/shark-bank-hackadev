@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function Cadastro() {
   const [cpf, setCpf] = useState("");
@@ -99,10 +100,13 @@ export function Cadastro() {
               onChange={() => setLiOsTermos(!liOsTermos)}
               required
             />
-            Li os termos de compromisso
+            Li os {/*<Link to="termos">termos</Link>*/} termos de compromisso
           </label>
         <br/>
+        <Link to="/registro">
           <button type="submit">Cadastrar</button>
+        </Link>
+          
         </form>
       </div>
     </div>

@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 
 export function EmailEnviado() {
 
@@ -15,9 +16,11 @@ export function EmailEnviado() {
       Foi enviado um e-mail para sua caixa de entrada, siga as instruções para a 
       recuperação da sua senha.
       </p>
-
-      <button onClick={() => window.history.back()}>Voltar</button>
+      
       </div>
+      <Link to="/login">
+          <button >Voltar</button>
+      </Link>
     </div>
   );
 }

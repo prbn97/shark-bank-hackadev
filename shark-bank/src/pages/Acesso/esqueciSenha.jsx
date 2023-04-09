@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function EsqueciSenha() {
   const [email, setEmail] = useState("");
@@ -31,11 +32,17 @@ export function EsqueciSenha() {
           required
         />
         <br />
-        <button type="submit">Enviar</button>
+        
       </form>
-      {/* enquanto n tem rotas usei isso, mas acho que entra em 
-      looping com a página do emailEnviado */}
-      <button onClick={() => window.history.back()}>Voltar</button>
+      <Link to="/emailenviado">
+        <button type="submit">Enviar</button>
+      </Link>
+      
+
+      <Link to="/login">
+        <button>Voltar</button>
+      </Link>
+      
       </div>
     </div>
   );

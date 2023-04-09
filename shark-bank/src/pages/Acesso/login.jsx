@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 import { Button } from "../../components/Button";
 
@@ -78,11 +79,15 @@ export function PaginaLogin() {
         Lembrar-me
       </label>
     
-      {/* como ainda não tô sabendo mexer com rotas, 
-      por hora é isso*/}
-      <a>Esqueci a senha</a>
+      <Link to="/esquecisenha">
+        <a>Esqueci a senha</a>
+      </Link>
+      
       <br/>
-      <Button titulo="Acessar"/>
+      <Link to="/principal">
+        <Button titulo="Acessar" onClick={handleAccess}/>
+      </Link>
+      
       {/* <button onClick={handleAccess}>Acessar</button> */}
       </div>
     </div>
