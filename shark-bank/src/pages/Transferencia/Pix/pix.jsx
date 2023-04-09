@@ -25,7 +25,9 @@ export function Pix() {
   
   return (
     <div className="corpo">
-      <img src={Bateria} alt="" />
+
+      <img src={Bateria} alt="imagem da bateria do celular" />
+      
       <div className='user'>
 
       </div>

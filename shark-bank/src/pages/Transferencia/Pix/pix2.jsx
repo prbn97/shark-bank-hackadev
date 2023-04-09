@@ -26,7 +26,7 @@ export function Pix2() {
 
 
         
-          <Link to="/pix1">
+          <Link to="/pix">
           <ButtonRecuar/>
           </Link>
         
