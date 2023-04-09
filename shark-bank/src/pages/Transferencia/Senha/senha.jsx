@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { ButtonRecuar } from "../../../components/Button/Recuar";
 import { ButtonAvancar } from "../../../components/Button/Avancar";
 import { Link } from 'react-router-dom';
+import Bateria from '../../../assets/bateria.png'
 
 //falta css e estilizar 
 export function Senha() {
@@ -28,30 +29,43 @@ export function Senha() {
 
   return (
     <div className="corpo">
-        <div className="user">
-          
-          <ButtonRecuar onClick={() => window.history.back()}/>
-          
-        </div>
+
+      <img src={Bateria} alt="imagem da bateria do celular" />   
+
         
-        <br/>
+        
         <div className="campo">
-          <span>Digite a senha de 4 digitos do seu cartão</span>
+
+        <fieldset id="fields-set">
+
+          <div className="user">
+            
+            <ButtonRecuar onClick={() => window.history.back()}/>
+            
+          </div>
+          <h1>Digite a senha de 4 digitos do seu cartão</h1>
           <br/>
-          {digitos.map((digit, index) => (
-            <input
-              key={index}
-              type="password"
-              value={digit}
-              onChange={(e) => handleChange(e, index)}
-              ref={refs[index]}
-              
-            />
-          ))}
-          <br/>
-          <Link to="/sucesso">
-          <ButtonAvancar onClick={handleNext}/>
-          </Link>
+          <div className="inputSenha">
+
+            {digitos.map((digit, index) => (
+              <input className="inputReduzido04"
+                key={index}
+                type="password"
+                value={digit}
+                onChange={(e) => handleChange(e, index)}
+                ref={refs[index]}
+                
+              />
+            ))}
+          </div>
+
+        </fieldset>
+
+          <div className='botaoAvancar'>
+            <Link to="/sucesso">
+            <ButtonAvancar onClick={handleNext}/>
+            </Link>
+          </div>
           
       </div>
     </div>

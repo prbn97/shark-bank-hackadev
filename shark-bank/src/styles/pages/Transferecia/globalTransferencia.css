@@ -115,6 +115,17 @@ fieldset input{
     padding-left: 20px;
 }
 
+.inputReduzido02{
+    background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
+    border: 1px solid #1B85C3;
+    border-radius: 26px;
+    box-sizing: border-box;
+    font-weight: 500;
+    height: 40px;
+    width: 207px;
+    padding-left: 20px;
+}
+
 .inputReduzido03{
     background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
     border: 1px solid #1B85C3;
@@ -126,17 +137,30 @@ fieldset input{
     padding-left: 20px;
 }
 
-
-.inputReduzido02{
+.inputReduzido04{
     background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
     border: 1px solid #1B85C3;
     border-radius: 26px;
     box-sizing: border-box;
     font-weight: 500;
     height: 40px;
-    width: 207px;
+    width: 48px;
     padding-left: 20px;
+
 }
+
+.inputSenha{
+
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
 
 .botaoAvancar{
     
