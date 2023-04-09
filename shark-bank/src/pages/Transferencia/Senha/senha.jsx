@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { ButtonRecuar } from "../../../components/Button/Recuar";
 import { ButtonAvancar } from "../../../components/Button/Avancar";
+import { Link } from 'react-router-dom';
 
 //falta css e estilizar 
 export function Senha() {
@@ -20,32 +21,38 @@ export function Senha() {
 
   function handleNext() {
     const password = digitos.join(""); // une os dígitos em uma senha
+    localStorage.setItem('senha', password);
+
     console.log(password); // imprime a senha
   }
 
   return (
     <div className="corpo">
         <div className="user">
-
+          
+          <ButtonRecuar onClick={() => window.history.back()}/>
+          
         </div>
-        <ButtonRecuar/>
         
         <br/>
         <div className="campo">
-        <span>Digite a senha de 4 digitos do seu cartão</span>
-        <br/>
-      {digitos.map((digit, index) => (
-        <input
-          key={index}
-          type="password"
-          value={digit}
-          onChange={(e) => handleChange(e, index)}
-          ref={refs[index]}
-        />
-      ))}
-      <br/>
-      <ButtonAvancar/>
-      <button onClick={handleNext}>Próximo</button>
+          <span>Digite a senha de 4 digitos do seu cartão</span>
+          <br/>
+          {digitos.map((digit, index) => (
+            <input
+              key={index}
+              type="password"
+              value={digit}
+              onChange={(e) => handleChange(e, index)}
+              ref={refs[index]}
+              
+            />
+          ))}
+          <br/>
+          <Link to="/sucesso">
+          <ButtonAvancar onClick={handleNext}/>
+          </Link>
+          
       </div>
     </div>
   );
