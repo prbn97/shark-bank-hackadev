@@ -3,7 +3,7 @@ import { ButtonRecuar } from '../../../components/Button/Recuar';
 import { ButtonAvancar } from '../../../components/Button/Avancar';
 import { Input } from '../../../components/Input';
 import { Link } from 'react-router-dom';
-import '../../../styles/pages/Transferecia/globalTransferencia.css'
+// import '../../../styles/pages/Transferecia/globalTransferencia.css'
 import Bateria from '../../../assets/bateria.png'
 
 
@@ -27,18 +27,20 @@ export function Pix() {
     <div className="corpo">
       <img src={Bateria} alt="" />
       <div className='user'>
-          
-      </div>
-      <Link to="/principal">
-      
 
-      </Link>
+      </div>
       
-        <br/>
+      
+       
       <div className='campo'>
         <fieldset id="fields-set">
 
-          <ButtonRecuar/>
+          <Link to="/principal">
+
+            <ButtonRecuar/>
+
+          </Link>
+          
           <h1>Qual é o valor do seu PIX?</h1>
           <p>Saldo disponível em conta:</p>
           {/* <p>{formatarSaldo(saldoConta)}</p> */}
