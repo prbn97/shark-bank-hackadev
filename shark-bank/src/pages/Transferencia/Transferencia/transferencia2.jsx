@@ -18,7 +18,7 @@ export function Transferencia2() {
   
   return (
     <div className="corpo">
-      <Link to="/transferencia1">
+      <Link to="/transferencia">
       <ButtonRecuar/>  
       </Link>
           
