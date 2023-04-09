@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 
-export function Input() {
+export function Input(props) {
     return (
-        <Container type="text" />
+        <Container type="text" onChange={props.onChange} />
     );
 }
