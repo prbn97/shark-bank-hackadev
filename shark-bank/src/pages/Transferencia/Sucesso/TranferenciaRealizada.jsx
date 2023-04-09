@@ -1,6 +1,7 @@
 import { ButtonSair } from "../../../components/Button/Sair";
 import { ButtonAvancar } from "../../../components/Button/Avancar";
 import happyshark from "../../../assets/happyshark.png"
+import { Link } from 'react-router-dom';
 
 export function TransferenciaRealizada(){
 
@@ -20,7 +21,10 @@ export function TransferenciaRealizada(){
                 </div>
             </div>
 
-            <ButtonAvancar/>
+            <Link to="/principal">
+                 <ButtonAvancar/>
+            </Link>
+            
 
         </div>
         
