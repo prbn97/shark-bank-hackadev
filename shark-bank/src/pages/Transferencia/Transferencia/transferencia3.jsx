@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ButtonRecuar } from '../../../components/Button/Recuar';
 import { ButtonAvancar } from '../../../components/Button/Avancar';
 import { Link } from 'react-router-dom';
+import Bateria from '../../../assets/bateria.png'
 
 export function Transferencia3() {
   const [tabelaT2, setTabelaT2] = useState([]);
@@ -25,25 +26,36 @@ export function Transferencia3() {
   return (
     <div className="corpo">
 
-      <Link to="/transferencia2">
-      <ButtonRecuar/>
+      <img src={Bateria} alt="imagem da bateria do celular" />
 
-      </Link>
 
-      <div className="user">
-        <h1>Transferindo</h1>
-        <p>R$ {localStorage.getItem('transferencia')}</p>
-      </div>
       <div className="campo">
-        
-      <p>Banco: {valorCampo.banco}</p>
-        <p>Agência: {valorCampo.agencia}</p>
-        <p>Conta: {valorCampo.conta}</p>
-      </div>
+        <fieldset id="fields-set">
 
-      <Link to="/senha">
-      <ButtonAvancar onClick={funcionaDiabo}/>
-      </Link>
+
+          <Link to="/transferencia2">
+          <ButtonRecuar/>
+
+          </Link>
+
+          <div className="user">
+            <h1>Transferindo</h1>
+            <p>R$ {localStorage.getItem('transferencia')}</p>
+          </div>
+            
+          <p>Banco: {valorCampo.banco}</p>
+          <p>Agência: {valorCampo.agencia}</p>
+          <p>Conta: {valorCampo.conta}</p>
+          
+          <div className='botaoAvancar'>
+            <Link to="/senha">
+            <ButtonAvancar onClick={funcionaDiabo}/>
+            </Link>
+          </div>
+
+        </fieldset>
+
+      </div>
 
     </div>
   );
