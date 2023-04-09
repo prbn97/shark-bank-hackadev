@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonRecuar } from '../../../components/Button/Recuar';
 import { ButtonAvancar } from '../../../components/Button/Avancar';
 import { Input } from '../../../components/Input';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Pix() {
   const [saldoConta, setSaldoConta] = useState(0);
@@ -11,6 +11,7 @@ export function Pix() {
     const valor = event.target.value;
     const novoSaldo = valor.replace(/\D/g, '') / 100;
     setSaldoConta(novoSaldo);
+    localStorage.setItem('transferencia', novoSaldo);
   }
   
   function formatarSaldo(saldo) {
@@ -23,7 +24,10 @@ export function Pix() {
       <div className='user'>
           
       </div>
+      <Link to="/principal">
       <ButtonRecuar/>
+
+      </Link>
       
         <br/>
       <div className='campo'>
@@ -34,10 +38,9 @@ export function Pix() {
         
         <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
         <br/>
-        {/* <Link to="/outra-pagina"> */}
+        <Link to="/pix2">
           <ButtonAvancar/>
-          
-        {/* </Link> */}
+        </Link>
 
       </div>
       
