@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ButtonRecuar } from '../../../components/Button/Recuar';
 import { ButtonAvancar } from '../../../components/Button/Avancar';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Transferencia() {
   const [saldoConta, setSaldoConta] = useState(0);
@@ -10,6 +10,7 @@ export function Transferencia() {
     const valor = event.target.value;
     const novoSaldo = valor.replace(/\D/g, '') / 100;
     setSaldoConta(novoSaldo);
+    localStorage.setItem('transferencia', novoSaldo);
   }
   
   function formatarSaldo(saldo) {
@@ -19,7 +20,10 @@ export function Transferencia() {
   
   return (
     <div className="corpo">
+      <Link to="/principal">
       <ButtonRecuar/>
+
+      </Link>
       
         <br/>
       <div className='campo'>
@@ -28,10 +32,9 @@ export function Transferencia() {
       {/* <p>{formatarSaldo(saldoConta)}</p> */}
       <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
       <br/>
-      {/* <Link to="/outra-pagina"> */}
-        <ButtonAvancar/>
-        
-      {/* </Link> */}
+      <Link to="/transferencia2">
+        <ButtonAvancar/>  
+      </Link>
       </div>
     </div>
     
