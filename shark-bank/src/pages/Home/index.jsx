@@ -8,7 +8,7 @@ import { ButtonSair } from '../../components/Button/Sair';
 import { ButtonPix } from '../../components/Lobby/Pix';
 import Bateria from '../../assets/bateria.png'
 import { Link } from 'react-router-dom';
-import { ButtonDummy } from '../../components/Button/DummyButton';
+// import { ButtonDummy } from '../../components/Button/DummyButton';
 
 export function Home() {
   return (
@@ -32,9 +32,9 @@ export function Home() {
       <ButtonAvancar />
       <ButtonCadastrar /> 
       
-      <Link to='/dummy'>
+      {/* <Link to='/dummy'>
         <ButtonDummy />
-      </Link>
+      </Link> */}
       
       <ButtonRecuar />
       <ButtonSair />
