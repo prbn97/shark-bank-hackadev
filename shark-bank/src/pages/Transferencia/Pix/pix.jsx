@@ -3,6 +3,10 @@ import { ButtonRecuar } from '../../../components/Button/Recuar';
 import { ButtonAvancar } from '../../../components/Button/Avancar';
 import { Input } from '../../../components/Input';
 import { Link } from 'react-router-dom';
+import '../../../styles/pages/Transferecia/globalTransferencia.css'
+import Bateria from '../../../assets/bateria.png'
+
+
 
 export function Pix() {
   const [saldoConta, setSaldoConta] = useState(0);
@@ -21,26 +25,37 @@ export function Pix() {
   
   return (
     <div className="corpo">
+      <img src={Bateria} alt="" />
       <div className='user'>
           
       </div>
       <Link to="/principal">
-      <ButtonRecuar/>
+      
 
       </Link>
       
         <br/>
       <div className='campo'>
+        <fieldset id="fields-set">
 
-        <h1>Qual é o valor do seu PIX?</h1>
-        <p>Saldo disponível em conta:</p>
-        {/* <p>{formatarSaldo(saldoConta)}</p> */}
+          <ButtonRecuar/>
+          <h1>Qual é o valor do seu PIX?</h1>
+          <p>Saldo disponível em conta:</p>
+          {/* <p>{formatarSaldo(saldoConta)}</p> */}
+          
+          
+          <input className='input' type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
+          <br/>
+                         
         
-        <input type="text" value={formatarSaldo(saldoConta)} onChange={InputChange} />
-        <br/>
-        <Link to="/pix2">
-          <ButtonAvancar/>
-        </Link>
+        </fieldset>
+
+        <div className='botaoAvancar'>
+
+            <Link to="/pix2">
+            <ButtonAvancar/>
+          </Link>
+        </div>
 
       </div>
       

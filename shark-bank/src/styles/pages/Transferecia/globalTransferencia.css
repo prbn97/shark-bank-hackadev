@@ -1,0 +1,103 @@
+
+
+h1,
+input,
+label {
+  font-family: sans-serif;
+  color: #111B59;
+}
+
+h1 {
+  width: 200px;
+  height: 54.7px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+
+}
+
+p {
+  color: #101626;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+.corpo {
+    
+    background-color: #1B85C3;
+    width: 375px;
+    height: 812px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  
+}
+
+#user {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.campo {
+    margin-top: 5vh;
+    border-radius: 20px 20px 0px 0px ;
+    box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.25);
+
+    background-color: #D9D9D9;
+    width: 375px;
+    height: 743px;
+}
+
+fieldset {
+    
+    padding:25px;
+    border-style: none;
+    
+}
+
+fieldset h1{
+    margin-top: 25px
+    
+}
+
+fieldset p{
+    margin-top: 10px;
+}
+
+fieldset input{
+    margin-top: 10px;
+}
+
+.input{
+    background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
+    border: 1px solid #1B85C3;
+    border-radius: 26px;
+    box-sizing: border-box;
+    font-weight: 500;
+    height: 40px;
+    width: 295px;
+    padding-left: 20px;
+}
+.botaoAvancar{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 35vh;
+    padding: 25px;
+    
+}
+#label {
+  border-radius: 26px;
+  width: 168px;
+  height: 40px;
+  background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
+}

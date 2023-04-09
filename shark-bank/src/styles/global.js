@@ -19,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         outline: nome;
         color: ${({ theme }) => theme.COLORS.COR_PADRAO_DA_FONTE};
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
     }
 
     a {
