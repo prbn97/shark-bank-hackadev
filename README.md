@@ -17,7 +17,6 @@ Com o Hackadev, os participantes terão a oportunidade de vivenciar um ambiente 
  - [Mário Igor Barbosa](https://github.com/migorking)
  - [Juliana Rodrigues](https://github.com/Julianacris)
  - [Natasha Lima](https://github.com/NatashaLima)
- - [Pablo Rangel](https://github.com/pablorangell)
  - [Pedro Cruz](https://github.com/PedroCruz000)
  - [Saulo Emídio](https://github.com/sauloemidio)
  - [Paulo Reis](https://github.com/prbn97)

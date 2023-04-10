@@ -1,0 +1,109 @@
+.textoPequeno,.link{
+    font-family: 'Inter', sans-serif;
+    color: #345170;
+    font-weight: 700;
+    font-size: 15px;
+    margin:0;
+    padding: 0;
+}
+
+.textoPequenoAcesso{
+    color: #345170;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.link{
+    text-decoration: underline;
+}
+.corpoAcesso{
+   
+    
+    background-color: #1B85C3;
+    width: 375px;
+    height: 812px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.bateria{
+    margin-top: 0;
+}
+
+.textoAcesso{
+    font-family: 'Inter', sans-serif;
+
+    margin-top: 15vh;
+    padding: 20px;
+
+    color:#EBEBEB ;
+    font-size: 20px;
+
+
+}
+
+.campoAcesso{
+    
+    /* margin-top: 25vh; */
+    border-radius: 20px  ;
+    box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.25);
+
+    background-color: #D9D9D9;
+    width: 343px;
+    height: 344px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+    padding: 30px;
+       
+}
+
+.esqueciASenha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    margin: 5px;
+    
+    padding: 0;
+   
+}
+.LembremeChackBox{
+    display: flex;
+}
+
+.inputCheckBox{
+    margin: 0;
+}
+
+.imputAcesso{
+
+    margin-top: 20px;
+}
+
+.buttonsAcesso{
+       
+    margin: 20px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.buttonsAcesso button{
+    gap: 20px;
+    margin: 5px;
+}
+
