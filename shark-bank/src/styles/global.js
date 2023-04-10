@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     body, input, button, textarea {
         font-family: 'Inter', sans-serif;
         font-size: 16px;
+        
         outline: nome;
         color: ${({ theme }) => theme.COLORS.COR_PADRAO_DA_FONTE};
 

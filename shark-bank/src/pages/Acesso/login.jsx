@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Button } from "../../components/Button";
 import Bateria from '../../assets/bateria.png'
+import '../../styles/pages/Acesso/Acesso.css'
 
 export function PaginaLogin() {
   const [cpf, setCpf] = useState("");
@@ -59,17 +60,19 @@ export function PaginaLogin() {
   }
 
   return (
-    <div className="corpo">
+    <div className="corpoAcesso">
 
-      <img src={Bateria} alt="imagem da bateria do celular" />
+      <div className="bateria">
+        <img src={Bateria} alt="imagem da bateria do celular" />
 
-      <div className="user">
+      </div>
+     
+      <div className="textoAcesso">
         <h2>Acesso</h2>
       </div>
 
-      
-      <div className="campo">
-        <fieldset id="fields-set">
+      <div className="campoAcesso">
+        <fieldset className ="fields-set-acesso">
 
           <div >
             <label>
@@ -79,20 +82,27 @@ export function PaginaLogin() {
           </div>
 
 
-          <br />
+          
           <label>
-            Senha:
-            <input type="password" value={password} onChange={handlePasswordChange} />
+            <p className='inputNome'>Senha:</p>
+           
+            <input className='input' type="password" value={password} onChange={handlePasswordChange} />
           </label>
-          <br />
-          <label>
-            <input type="checkbox" checked={remember} onChange={handleRememberChange} />
-            Lembrar-me
-          </label>
-        
-          <Link to="/esquecisenha">
-            <a>Esqueci a senha</a>
-          </Link>
+          
+          <div className="esqueciASenha">
+
+            <div className="LembremeChackBox">
+              <input className="inputCheckBox" type="checkbox" checked={remember} onChange={handleRememberChange} />
+              <p className="textoPequeno">Lembrar-me</p>
+            </div>
+            
+              
+                                  
+            <Link to="/esquecisenha">
+              <a className="link">Esqueci a senha</a>
+            </Link>
+
+          </div>
         </fieldset>
         <br/>
         <Link to="/principal">

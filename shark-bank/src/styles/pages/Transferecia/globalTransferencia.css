@@ -3,8 +3,10 @@
 h1,
 input,
 label {
-  font-family: sans-serif;
-  color: #111B59;
+    
+    color: #111B59;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 h1 {
@@ -58,9 +60,7 @@ p {
     width: 375px;
     height: 743px;
     position: relative;
-    
-    
-
+        
     
 }
 
@@ -85,6 +85,8 @@ fieldset p{
 .inputNome{
     color: #1B85C3;
     margin-left: 20px;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 fieldset input{
