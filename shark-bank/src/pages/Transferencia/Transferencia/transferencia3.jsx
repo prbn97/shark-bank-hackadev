@@ -10,12 +10,14 @@ export function Transferencia3() {
 
   function funcionaDiabo() {
     const transferencia = localStorage.getItem('transferencia2') || 0;
-    const [banco, agencia, conta] = transferencia.split(';');
+    const [banco, agencia, conta, cpfdestino,codigo] = transferencia.split(';');
     
     const novoRegistro = {
       banco,
       agencia,
       conta,
+      cpfdestino,
+      codigo,
       data: new Date().toLocaleString(),
     };
 
@@ -46,6 +48,8 @@ export function Transferencia3() {
           <p>Banco: {valorCampo.banco}</p>
           <p>Agência: {valorCampo.agencia}</p>
           <p>Conta: {valorCampo.conta}</p>
+          <p>Cpf destino: {valorCampo.cpfdestino}</p>
+          <p>Conta: {valorCampo.codigo}</p>
           
           <div className='botaoAvancar'>
             <Link to="/senha">
