@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { ButtonPix } from "../../../components/Lobby/Pix";
 import { ButtonTrans } from "../../../components/Lobby/Transferir";
+import Bateria from '../../../assets/bateria.png'
 
 
 export function Principal() {
@@ -19,24 +20,27 @@ export function Principal() {
 
   return (
     <div className="corpo">
-        <div className="botões">
-            <Link to="/pix">
-                <ButtonPix className="botão1"/>
-            </Link>
-
-            <Link to="/transferencia">
-                <ButtonTrans className="botão2"/>
-            </Link>
-            
-            
-        </div>
+      <img src={Bateria} alt="imagem da bateria do celular" />
       <div className="user">
         <h1>Histórico de Transferências</h1>
       </div>
+
+        <div className="botao">
+            <Link to="/pix">
+                <ButtonPix className="botaopix"/>
+            </Link>
+
+            <Link to="/transferencia">
+                <ButtonTrans className="botaotransferencia"/>
+            </Link>
+              
+        </div>
+      <fieldset id="fields-set">
       <div className="campo">
         <p> {tabelaT}</p>
         <p> {tabelaT2}</p>
       </div>
+      </fieldset>
     </div>
   );
 }
