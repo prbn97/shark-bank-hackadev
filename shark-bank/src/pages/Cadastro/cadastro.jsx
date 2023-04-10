@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import Bateria from '../../assets/bateria.png'
+import '../../styles/pages/Cadastro/Cadastro.css'
 
 export function Cadastro() {
   const [cpf, setCpf] = useState("");
@@ -28,17 +31,20 @@ export function Cadastro() {
   };
 
   return (
-    <div className="corpo">
-      
-      <div className="user">
+    <div className="corpoCadastro">
+      <img src={Bateria} alt="imagem da bateria do celular" />
+      <div className="textoCadastro">
         <h1>Cadastro</h1>
 
       </div>
+
       {/* onSubmit={handleCadastro} */}
-      <div className="campo">
+      <div className="campoCadastro">
+      
         <form >
+        
           <label htmlFor="cpf">CPF:</label>
-          <input
+          <Input
             type="text"
             id="cpf"
             value={cpf}
@@ -47,7 +53,7 @@ export function Cadastro() {
           />
         <br/>
           <label htmlFor="nomeCompleto">Nome Completo:</label>
-          <input
+          <Input
             type="text"
             id="nomeCompleto"
             value={nomeCompleto}
@@ -56,7 +62,7 @@ export function Cadastro() {
           />
         <br/>
           <label htmlFor="celular">Celular:</label>
-          <input
+          <Input
             type="text"
             id="celular"
             value={celular}
@@ -65,7 +71,7 @@ export function Cadastro() {
           />
         <br/>
           <label htmlFor="email">E-mail:</label>
-          <input
+          <Input
             type="email"
             id="email"
             value={email}
@@ -74,7 +80,7 @@ export function Cadastro() {
           />
         <br/>
           <label htmlFor="password">Senha:</label>
-          <input
+          <Input
             type="password"
             id="password"
             value={password}
@@ -83,7 +89,7 @@ export function Cadastro() {
           />
         <br/>
           <label htmlFor="confirmarSenha">Confirmar senha:</label>
-          <input
+          <Input
             type="password"
             id="confirmarSenha"
             value={confirmarSenha}
@@ -99,14 +105,15 @@ export function Cadastro() {
               onChange={() => setLiOsTermos(!liOsTermos)}
               required
             />
-            Li os {/*<Link to="termos">termos</Link>*/} termos de compromisso
+           Li os {/*<Link to="termos">termos</Link>*/} termos de compromisso
           </label>
-        <br/>
-        <Link to="/registro">
-          {/* <button type="submit" onClick={handleCadastro} >Cadastrar</button> */}
-          <Button onClick={handleCadastro} titulo="Cadastrar" />
-        </Link>
-          
+        {/* <br/> */}
+        <div className="buttonsCadastro">
+            <Link to="/registro">
+              {/* <button type="submit" onClick={handleCadastro} >Cadastrar</button> */}
+              <Button onClick={handleCadastro} titulo="Cadastrar" />
+            </Link>
+        </div>
         </form>
       </div>
     </div>

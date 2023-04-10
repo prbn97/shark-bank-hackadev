@@ -7,7 +7,7 @@ export const Container = styled.input`
     box-sizing: border-box;
     font-weight: 500;
     height: 40px;
-    width: 295px;
+    width: 270px;
     padding-left: 20px;
 
     &:focus {
