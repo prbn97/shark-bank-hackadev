@@ -14,53 +14,56 @@ import Onda from '../../assets/efeito de onda.png';
 
 export function Home() {
   return (
-    <Container>
+    <div className='corpo'>
+      
       <img src={Bateria} alt="imagem do das informações de bateria e sinal do celular" />
       
-      <h1>Shark Bank</h1>
+      <div className='campo'>
+         <h1>Shark Bank</h1>
 
-      <img src={Onda} alt="efeito de onda" />
+         <img src={Onda} alt="efeito de onda" />
 
-      <p>Venha mergulhar nesse oceano de vantagens!</p>
+         <p>Venha mergulhar nesse oceano de vantagens!</p>
 
-      <img src={mobile} alt="imagem logo" />
+         <img src={mobile} alt="imagem logo" />  
 
-      <h2>Crie sua conta!</h2>
+         <h2>Crie sua conta!</h2>
 
-      <h4>Você precisa apenas de um email e um número de telefone para começar!</h4>
+         <h4>Você precisa apenas de um email e um número de telefone para começar!</h4>
 
-      {/*<Button titulo="Cadastrar" />
-      <Button titulo="Enviar" />*/}
-      <Button titulo="Acessar" />
-
-      <Button
-        titulo="Cadastrar"
-        corTitulo='#101626'
-        corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
+         {/*<Button titulo="Cadastrar" />
+         <Button titulo="Enviar" />*/}
+         <Button titulo="Acessar" />
+      
+         <Button
+         titulo="Cadastrar"
+         corTitulo='#101626'
+         corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
          />
 
-     {/* <div style={{ backgroundColor: '#D9D9D9' }}>
-        <h1>Estilo input componente</h1>
-        <Input />
-    </div>*/}
+         {/* <div style={{ backgroundColor: '#D9D9D9' }}>
+         <h1>Estilo input componente</h1>
+         <Input />
+         </div>*/}
 
-     {/* <ButtonAvancar />
-      <ButtonCadastrar /> */}
-      
-      {/* <Link to='/dummy'>
-        <ButtonDummy />
-      </Link> */}
-      
-      {/*<ButtonRecuar />
-      <ButtonSair />
-      <ButtonPix />*/}
+         {/* <ButtonAvancar />
+         <ButtonCadastrar /> */}
 
-      
-      {/*// MEU MIC NÃO ESTÁ ATIVADO*/}
+         {/* <Link to='/dummy'>
+         <ButtonDummy />
+         </Link> */}
 
+         {/*<ButtonRecuar />
+         <ButtonSair />
+         <ButtonPix />*/}
+
+
+         {/*// MEU MIC NÃO ESTÁ ATIVADO*/}
+
+      </div>
       
     
 
-    </Container>
+    </div>
   );
 }
