@@ -16,11 +16,11 @@ export function EmailEnviado() {
       Foi enviado um e-mail para sua caixa de entrada, siga as instruções para a 
       recuperação da sua senha.
       </p>
-      
-      </div>
       <Link to="/login">
           <button >Voltar</button>
       </Link>
+      </div>
+      
     </div>
   );
 }
