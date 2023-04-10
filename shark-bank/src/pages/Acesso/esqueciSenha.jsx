@@ -7,8 +7,8 @@ import { Button } from "../../components/Button";
 export function EsqueciSenha() {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
+    // event.preventDefault();
     localStorage.setItem("esqueciSenhaEmail", email);
     alert("blzzz funcionando");
   };
@@ -51,7 +51,7 @@ export function EsqueciSenha() {
 
 
           <Link to="/emailenviado">
-            <Button titulo= 'Enviar' />
+            <Button onClick={handleSubmit} titulo= 'Enviar' />
             
           </Link>
 
@@ -69,10 +69,10 @@ export function EsqueciSenha() {
         </div>
 
 
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           
           
-        </form>
+        </form> */}
       
       </div>
     </div>
