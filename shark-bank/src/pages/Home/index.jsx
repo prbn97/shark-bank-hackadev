@@ -9,7 +9,7 @@ import { Button } from '../../components/Button';
 import Bateria from '../../assets/bateria.png';
 import mobile from '../../assets/mobile.png';
 import Onda from '../../assets/efeito de onda.png';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { ButtonDummy } from '../../components/Button/DummyButton';
 
 export function Home() {
@@ -33,13 +33,18 @@ export function Home() {
 
          {/*<Button titulo="Cadastrar" />
          <Button titulo="Enviar" />*/}
-         <Button titulo="Acessar" />
-      
-         <Button
-         titulo="Cadastrar"
-         corTitulo='#101626'
-         corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
-         />
+        <Link to="/login">
+          <Button titulo="Acessar" />
+        </Link>
+         
+         <Link to="/cadastro">
+              <Button
+              titulo="Cadastrar"
+              corTitulo='#101626'
+              corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
+              />
+         </Link>
+         
 
          {/* <div style={{ backgroundColor: '#D9D9D9' }}>
          <h1>Estilo input componente</h1>
