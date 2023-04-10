@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-
+import { Button } from "../../components/Button";
 export function Registro() {
   const [cep, setCep] = useState("");
   const [uf, setUf] = useState("");
@@ -82,7 +82,7 @@ export function Registro() {
         </label>
       </div>
       <Link to="/login">
-          <button onClick={handleRegistrarClick}>Registrar</button>
+          <Button onClick={handleRegistrarClick} titulo="Registrar"/>
       </Link>
       
     </div>
