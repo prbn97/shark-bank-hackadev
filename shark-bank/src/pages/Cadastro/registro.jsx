@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import Bateria from '../../assets/bateria.png'
+import '../../styles/pages/Cadastro/Cadastro.css'
+
 export function Registro() {
   const [cep, setCep] = useState("");
   const [uf, setUf] = useState("");
@@ -46,44 +50,49 @@ export function Registro() {
   };
 
   return (
-    <div className="corpo">
-      <div className="user">
+    <div className="corpoCadastro">
+      <img src={Bateria} alt="imagem da bateria do celular" />
+      <div className="textoCadastro">
         <h1>Registro</h1>
       </div>
-      <div className="campo">
+      <div className="campoCadastro">
         <label>
           CEP:
-          <input type="text" value={cep} onChange={handleCepChange} />
+          <Input type="text" value={cep} onChange={handleCepChange} />
         </label>
         
         <label>
           UF:
-          <input type="text" value={uf} onChange={handleUfChange} />
+          <Input type="text" value={uf} onChange={handleUfChange} />
         </label>
         <br/>
         <label>
           Endereço:
-          <input type="text" value={endereco} onChange={handleEnderecoChange} />
+          <Input type="text" value={endereco} onChange={handleEnderecoChange} />
         </label>
         
         <label>
           Número:
-          <input type="text" value={numero} onChange={handleNumeroChange} />
+          <Input type="text" value={numero} onChange={handleNumeroChange} />
         </label>
         <br/>
         <label>
           Complemento:
-          <input type="text" value={complemento} onChange={handleComplementoChange} />
+          <Input type="text" value={complemento} onChange={handleComplementoChange} />
         </label>
         <br/>
         <label>
           Bairro:
-          <input type="text" value={bairro} onChange={handleBairroChange} />
+          <Input type="text" value={bairro} onChange={handleBairroChange} />
         </label>
-      </div>
-      <Link to="/login">
+
+        <div className="buttonsCadastro">
+        <Link to="/login">
           <Button onClick={handleRegistrarClick} titulo="Registrar"/>
-      </Link>
+        </Link>
+        </div>
+      </div>
+      
       
     </div>
   );
