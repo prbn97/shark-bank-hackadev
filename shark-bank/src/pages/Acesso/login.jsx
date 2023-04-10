@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+// import { useHistory } from "react-router-dom";
 
 import { Button } from "../../components/Button";
 import Bateria from '../../assets/bateria.png'
@@ -11,6 +12,7 @@ export function PaginaLogin() {
   const [remember, setRemember] = useState(false);
 
   const rememberKey = "rememberData"
+  // const history = useHistory();
 
   useEffect(() => {
     const storedData = localStorage.getItem("rememberData");
@@ -18,7 +20,7 @@ export function PaginaLogin() {
       const parsedData = JSON.parse(storedData);
       setCpf(parsedData.cpf);
       setPassword(parsedData.password);
-      setRemember(true);
+      setRemember(false);
     }
   }, []);
 
@@ -49,8 +51,9 @@ export function PaginaLogin() {
             JSON.stringify({ cpf, password })
           );
         } else {
-          localStorage.removeItem("userData");
+          // localStorage.removeItem("userData");
         }
+      // history.push("/principal");
       } else {
         alert("CPF ou senha incorretos!");
       }
@@ -105,8 +108,10 @@ export function PaginaLogin() {
           </div>
         </fieldset>
         <br/>
+
+
         <Link to="/principal">
-          <Button titulo="Acessar" onClick={handleAccess}/>
+          <Button onClick={handleAccess} titulo="Acessar" />
         </Link>
         
         {/* <button onClick={handleAccess}>Acessar</button> */}
