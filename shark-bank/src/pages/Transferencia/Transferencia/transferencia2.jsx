@@ -8,12 +8,17 @@ export function Transferencia2() {
   const [campoBanco, setCampoBanco] = useState('');
   const [campoAgencia, setCampoAgencia] = useState('');
   const [campoConta, setCampoConta] = useState('');
+  const [campoCPF, setCampoCPF] = useState('');
+  const [campoCodigo, setCampoCodigo] = useState('');
+  
 
   function handleAvancarClick() {
     localStorage.setItem('transferencia2', JSON.stringify({
       banco: campoBanco,
       agencia: campoAgencia,
       conta: campoConta,
+      cpfdestino: campoCPF,
+      codigo: campoCodigo
     }));
   }
   
@@ -41,18 +46,18 @@ export function Transferencia2() {
 
             <div>
               <p className='inputNome'>CPF/CNPJ</p>
-              <input className='input' type="text" value={campoBanco} onChange={(event) => setCampoBanco(event.target.value)} />
+              <input className='input' type="text" value={campoCPF} onChange={(event) => setCampoCPF(event.target.value)} />
             </div>
 
             <div className='codigoInstituicao'>
               <div>
                 <p className='inputNome'> Código </p>
-                <input className='inputReduzido01' type="text" value={campoAgencia} onChange={(event) => setCampoAgencia(event.target.value)} />
+                <input className='inputReduzido01' type="text" value={campoCodigo} onChange={(event) => setCampoCodigo(event.target.value)} />
               </div>
               
               <div>
                 <p className='inputNome'>Instituição</p>
-                <input className='inputReduzido02' type="text" value={campoConta} onChange={(event) => setCampoConta(event.target.value)} />
+                <input className='inputReduzido02' type="text" value={campoBanco} onChange={(event) => setCampoBanco(event.target.value)} />
               </div>
             </div>
 
