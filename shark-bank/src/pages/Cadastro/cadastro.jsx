@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { Button } from "../../components/Button";
 
 export function Cadastro() {
   const [cpf, setCpf] = useState("");
@@ -10,8 +11,8 @@ export function Cadastro() {
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [liOsTermos, setLiOsTermos] = useState(false);
 
-  const handleCadastro = (event) => {
-    event.preventDefault();
+  const handleCadastro = () => {
+    // event.preventDefault();
     if (password !== confirmarSenha) {
       alert("As senhas não são iguais. Por favor, tente novamente.");
       return;
@@ -20,8 +21,6 @@ export function Cadastro() {
     const userData = {
       cpf,
       nomeCompleto,
-      celular,
-      email,
       password,
     };
     localStorage.setItem("userData", JSON.stringify(userData));
@@ -35,9 +34,9 @@ export function Cadastro() {
         <h1>Cadastro</h1>
 
       </div>
-      
+      {/* onSubmit={handleCadastro} */}
       <div className="campo">
-        <form onSubmit={handleCadastro}>
+        <form >
           <label htmlFor="cpf">CPF:</label>
           <input
             type="text"
@@ -104,7 +103,8 @@ export function Cadastro() {
           </label>
         <br/>
         <Link to="/registro">
-          <button type="submit">Cadastrar</button>
+          {/* <button type="submit" onClick={handleCadastro} >Cadastrar</button> */}
+          <Button onClick={handleCadastro} titulo="Cadastrar" />
         </Link>
           
         </form>
