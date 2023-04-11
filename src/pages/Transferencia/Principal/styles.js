@@ -8,10 +8,10 @@ export const Container = styled.main`
 
 
     .label{
+        
         color: #E6E6E6;
     }
     .fieldset{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -32,13 +32,10 @@ export const Container = styled.main`
 
     .botoesPix{
         margin-top: 24px;
-
-        text-align:center;
-
+        text-align: center;
         gap: 3em;
-
         display: flex;
-        flex-direction: row;
+        justify-content: space-around;
         
     }
     
@@ -60,6 +57,9 @@ export const Container = styled.main`
                    
     }
     .TrasnferenciaTexto{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
         
     }
 
@@ -69,7 +69,7 @@ export const Container = styled.main`
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 5px;
     }
 
     .TrasnferenciaTexto p{
@@ -79,7 +79,7 @@ export const Container = styled.main`
         font-style: normal;
         font-weight: 700;
         font-size: 10px;
-        line-height: 12px;
+        line-height: 5px;
     }
 
     .TrasnferenciaTexto span{
@@ -88,7 +88,7 @@ export const Container = styled.main`
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 5px;
     }
 
     .TrasnferenciaMes{
