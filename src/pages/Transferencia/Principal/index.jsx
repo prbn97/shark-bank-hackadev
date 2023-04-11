@@ -81,6 +81,70 @@ export function Principal() {
 
             </div>
 
+            <div className='Trasnferencia'>
+              
+              <img src={Depositar} alt="" />
+              
+              <section className='TrasnferenciaTexto'>
+                <h3>Transferência enviada (tipo)</h3>
+                <p>Beneficiário</p>
+                <p><span>R$ 0000,00</span></p>
+              </section>
+
+              <section className='TrasnferenciaMes'>
+                <h3>00 Mês</h3>
+              </section>
+
+            </div>
+
+            <div className='Trasnferencia'>
+              
+              <img src={Depositar} alt="" />
+              
+              <section className='TrasnferenciaTexto'>
+                <h3>Transferência enviada (tipo)</h3>
+                <p>Beneficiário</p>
+                <p><span>R$ 0000,00</span></p>
+              </section>
+
+              <section className='TrasnferenciaMes'>
+                <h3>00 Mês</h3>
+              </section>
+
+            </div>
+
+            <div className='Trasnferencia'>
+              
+              <img src={Depositar} alt="" />
+              
+              <section className='TrasnferenciaTexto'>
+                <h3>Transferência enviada (tipo)</h3>
+                <p>Beneficiário</p>
+                <p><span>R$ 0000,00</span></p>
+              </section>
+
+              <section className='TrasnferenciaMes'>
+                <h3>00 Mês</h3>
+              </section>
+
+            </div>
+
+            <div className='Trasnferencia'>
+              
+              <img src={Depositar} alt="" />
+              
+              <section className='TrasnferenciaTexto'>
+                <h3>Transferência enviada (tipo)</h3>
+                <p>Beneficiário</p>
+                <p><span>R$ 0000,00</span></p>
+              </section>
+
+              <section className='TrasnferenciaMes'>
+                <h3>00 Mês</h3>
+              </section>
+
+            </div>
+
 
 
 
