@@ -6,6 +6,8 @@ export const Container = styled.button`
     border-radius: 30px;
     border-style: none;
     color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
     height: 48px;
     justify-content: center;
     gap: 8px;

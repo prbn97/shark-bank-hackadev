@@ -8,35 +8,39 @@ import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
-    <Container className='conteudo'>
-
+    <Container>
       <img src={Bateria} alt="imagem do das informações de bateria e sinal do celular" />
 
-      <main className='conteudo__home'>
-        <h1>Shark Bank</h1>
+      <div className='conteudo__home'>
 
-        <img src={Onda} alt="efeito de onda" />
+        <div className='conteudo__home__titulo'>
+          <h1>Shark Bank</h1>
+          <img src={Onda} width={167} height={16} alt="efeito de onda" />
+          <h2 className='conteudo__home__titulo__h2'>Venha mergulhar nesse oceano de vantagens!</h2>
+        </div>
 
-        <p>Venha mergulhar nesse oceano de vantagens!</p>
+        <div className="conteudo__home__apresentacao">
+          <img src={mobile} width={80} height={80} alt="imagem logo" />
+          <h2>Crie sua conta!</h2>
+          <p>Você precisa apenas de um email e um número de telefone para começar!</p>
+        </div>
 
-        <img src={mobile} alt="imagem logo" />
+        <div className="conteudo__home__botoes">
+          <Link to="/login">
+            <Button titulo="Acessar" />
+          </Link>
 
-        <h2>Crie sua conta!</h2>
+          <Link to="/cadastro">
+            <ButtonCadastrar
+              titulo="Cadastrar"
+              corTitulo='#101626'
+              corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
+            />
+          </Link>
+        </div>
 
-        <h4>Você precisa apenas de um email e um número de telefone para começar!</h4>
 
-        <Link to="/login">
-          <Button titulo="Acessar" />
-        </Link>
-
-        <Link to="/cadastro">
-          <ButtonCadastrar
-            titulo="Cadastrar"
-            corTitulo='#101626'
-            corFundo='linear-gradient(180deg, #EBEBEB 24.32%, #101626 120.61%)'
-          />
-        </Link>
-      </main>
-    </Container>
+      </div>
+    </Container >
   );
 }
