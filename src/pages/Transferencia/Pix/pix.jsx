@@ -31,9 +31,7 @@ export function Pix() {
       <div className='user'>
 
       </div>
-      
-      
-       
+             
       <div className='campo'>
         <fieldset id="fields-set">
 

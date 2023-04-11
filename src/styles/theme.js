@@ -6,6 +6,5 @@ export const theme = {
 
         COR_PADRAO_DA_FONTE: "#101626",
         COR_PADRAO_TITULO: "#111B59",
-
-    }
+    },
 }
