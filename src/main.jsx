@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './styles/global';
 
-
-
 import { theme } from './styles/theme';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -16,7 +14,7 @@ import { Registro } from './pages/Cadastro/registro';
 import { TermoDeAceitacao } from './pages/Cadastro/termos';
 import { EsqueciSenha } from './pages/Acesso/esqueciSenha'
 import { EmailEnviado } from './pages/Acesso/emailEnviado';;
-import { Principal } from './pages/Transferencia/Principal/principal';
+import { Principal } from './pages/Transferencia/Principal';
 import { Pix } from './pages/Transferencia/Pix/pix';
 import { Pix2 } from './pages/Transferencia/Pix/pix2';
 import { Pix3 } from './pages/Transferencia/Pix/pix3';
