@@ -8,7 +8,7 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-    <SpaProxyServerUrl>https://localhost:44483</SpaProxyServerUrl>
+    <SpaProxyServerUrl>https://localhost:44462</SpaProxyServerUrl>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <RootNamespace>sharp_coders_hackadev</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -23,8 +23,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4" />
-    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
-    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
