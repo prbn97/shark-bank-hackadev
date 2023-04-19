@@ -11,5 +11,14 @@ public class SharkBankDbContext : DbContext
     public SharkBankDbContext(DbContextOptions<SharkBankDbContext> options)
         : base(options) { }
 
-    public DbSet<Acesso> Acessos { get; set; }
+    public DbSet<TesteAcesso> TesteAcessos { get; set; }
+    public DbSet<TesteUsuario> TesteUsuarios { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<TesteAcesso>()
+            .HasOne(a => a.TesteUsuario)
+            .WithMany()
+            .HasForeignKey(a => a.usuarioId);
+    }
 }

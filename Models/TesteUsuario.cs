@@ -2,7 +2,7 @@
 
 namespace sharp_coders_hackadev.Models;
 
-public class Notes
+public class TesteUsuario
 {
     public int Id { get; set; }
     public string Title { get; set; }
