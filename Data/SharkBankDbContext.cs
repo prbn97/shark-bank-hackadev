@@ -11,5 +11,5 @@ public class SharkBankDbContext : DbContext
     public SharkBankDbContext(DbContextOptions<SharkBankDbContext> options)
         : base(options) { }
 
-    public DbSet<Notes>? Notes { get; set; }
+    public DbSet<Notes> Notes { get; set; }
 }
