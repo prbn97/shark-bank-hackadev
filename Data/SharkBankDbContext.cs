@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Duende.IdentityServer.EntityFramework.Options;
@@ -46,4 +46,5 @@ public class SharkBankDbContext : DbContext
             .WithMany()
             .HasForeignKey(c => c.AgenciaId);     
     }
+
 }
