@@ -2,7 +2,9 @@ import React from 'react'
 
 function Cadastro() {
   return (
-    <div>Cadastro</div>
+    <div>
+      <h1 color='green'>Cadastro</h1>
+    </div>
   )
 }
 

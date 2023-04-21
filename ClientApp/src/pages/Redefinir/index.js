@@ -2,7 +2,9 @@ import React from 'react'
 
 function RedefinirSenha() {
   return (
-    <div>RedefinirSenha</div>
+    <div>
+      <h1 color='green'>RedefinirSenha</h1>
+    </div>
   )
 }
 

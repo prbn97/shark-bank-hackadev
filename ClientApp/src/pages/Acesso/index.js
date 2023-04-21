@@ -2,7 +2,9 @@ import React from 'react'
 
 function Acesso() {
   return (
-    <div>Acesso</div>
+    <div>
+      <h1 color='green'>Acesso</h1>
+    </div>
   )
 }
 
