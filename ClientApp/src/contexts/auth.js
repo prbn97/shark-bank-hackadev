@@ -3,30 +3,30 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState();
+    const [cliente, setCliente] = useState();
 
     useEffect(() => {
-        const userToken = localStorage.getItem("user_token");
-        const usersStorage = localStorage.getItem("users_db");
+        const clienteToken = localStorage.getItem("cliente_token");
+        const clientesStorage = localStorage.getItem("clientes_db");
 
-        if (userToken && usersStorage) {
-            const hasUser = JSON.parse(usersStorage)?.filter(
-                (user) => user.cpf === JSON.Parse(userToken).cpf);
+        if (clienteToken && clientesStorage) {
+            const temCliente = JSON.parse(clientesStorage)?.filter(
+                (user) => user.cpf === JSON.Parse(clienteToken).cpf);
 
-            if (hasUser) setUser(hasUser[0]);
+            if (temCliente) setCliente(temCliente[0]);
         }
     }, []);
 
     const acesso = (cpf, senha) => {
-        const usersStorage = localStorage.getItem("users_db");
+        const clientesStorage = localStorage.getItem("clientes_db");
 
-        const hasUser = JSON.parse(usersStorage)?.filter((user) => user.cpf === cpf && user.senha === senha);
+        const temCliente = JSON.parse(clientesStorage)?.filter((user) => user.cpf === cpf && user.senha === senha);
 
-        if (hasUser?.legth) {
-            if (hasUser[0].cpf === cpf && hasUser[0].senha === senha) {
+        if (temCliente?.legth) {
+            if (temCliente[0].cpf === cpf && temCliente[0].senha === senha) {
                 const token = Math.random().toString(36).substring(2);
-                localStorage.setItem("user_token", JSON.stringify({ cpf, token }));
-                setUser({ cpf, senha });
+                localStorage.setItem("cliente", JSON.stringify({ cpf, token }));
+                setCliente({ cpf, senha });
                 return;
             } else {
                 return "CPF ou senha inválidos";
@@ -37,32 +37,32 @@ export const AuthProvider = ({ children }) => {
     };
 
     const cadastrado = (cpf, senha) => {
-        const usersStorage = localStorage.getItem("users_db");
+        const clientesStorage = localStorage.getItem("clientes_db");
 
-        const hasUser = JSON.parse(usersStorage)?.filter((user) => user.cpf === cpf);
+        const temCliente = JSON.parse(clientesStorage)?.filter((user) => user.cpf === cpf);
 
-        if (hasUser?.legth) {
+        if (temCliente?.legth) {
             return "Cliente já cadastrado";
         }
 
         let novoCliente;
 
-        if (usersStorage) {
-            novoCliente = [...usersStorage, { cpf, senha }];
+        if (clientesStorage) {
+            novoCliente = [...clientesStorage, { cpf, senha }];
         } else {
             novoCliente = [{ cpf, senha }];
         }
 
-        localStorage.setItem("users_db", JSON.stringify(novoCliente));
+        localStorage.setItem("clientes_db", JSON.stringify(novoCliente));
     };
 
     const sair = () => {
-        setUser(null);
-        localStorage.removeItem("user_token");
+        setCliente(null);
+        localStorage.removeItem("cliente");
     };
 
     return (
-        <AuthContext.Provider value={{ user, signed: !!user, acesso, cadastrado, sair }}>
+        <AuthContext.Provider value={{ cliente, logado: !!cliente, acesso, cadastrado, sair }}>
             {children}
         </AuthContext.Provider>
     );

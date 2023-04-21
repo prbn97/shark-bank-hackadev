@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import useAuth from "../hooks/useAuth"
 
 import Acesso from "../pages/Acesso";
 import Cadastro from "../pages/Cadastro";
@@ -9,11 +10,12 @@ import Conta from "../pages/Conta";
 import RedefinirSenha from "../pages/Redefinir";
 import Pix from "../pages/Pix";
 
-const Private = ({ Item }) => {
-    // const token = localStorage.getItem("token");
-    const token = false;
 
-    return token > 0 ? <Item /> : <Acesso />;
+
+const Private = ({ Item }) => {
+    const { logado } = useAuth();
+
+    return logado > 0 ? <Item /> : <Acesso />;
 };
 
 function RoutesApp() {
