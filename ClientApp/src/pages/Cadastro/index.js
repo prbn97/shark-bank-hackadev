@@ -40,53 +40,72 @@ const Cadastro = () => {
 
   return (
     <C.Container>
-      <C.Label>Cadastro</C.Label>
-      <C.Content>
-        <Input
-          type="text"
-          placeholder="Digite aqui o seu CPF"
-          value={cpf}
-          onChange={(error) => [setCPF(error.target.value),setError("")]}
-        />
-        <Input
-          type="text"
-          placeholder="Digite aqui o seu nome completo"
-          value={nomeCompleto}
-          onChange={(error) => [setNomeCompleto(error.target.value),setError("")]}
-        />
-        <Input
-          type="email"
-          placeholder="Digite aqui o seu e-mail"
-          value={email}
-          onChange={(error) => [setEmail(error.target.value),setError("")]}
-        />
-        <Input
-          type="text"
-          placeholder="Digite aqui o seu celular"
-          value={celular}
-          onChange={(error) => [setCelular(error.target.value),setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Digite aqui a sua senha"
-          value={senha}
-          onChange={(error) => [setSenha(error.target.value),setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Confirme a sua senha"
-          value={confirmarSenha}
-          onChange={(error) => [setConfirmarSenha(error.target.value),setError("")]}
-        />
-        <C.LabelError>{error}</C.LabelError>
-        <Botao text="Cadastrar" onClick={handleCadastra} />
-        <C.LabelAcesso>
-          Já é cliente?
-          <C.Strong>
-            <Link to="/acesso">&nbsp;Acesse sua conta</Link>
-          </C.Strong>
-        </C.LabelAcesso>
-      </C.Content>
+
+      <C.Section><h1>
+
+        <p>Olá!</p>
+        <p>Seja bem-vindo ao</p>
+        <p><span>Shark Bank</span></p>
+        </h1>
+      </C.Section>
+
+
+      <C.Form>
+        <C.Label>
+          
+          Cadastro
+          
+          </C.Label>
+        <C.Content>
+
+          <Input
+            type="text"
+            placeholder="Digite aqui o seu CPF"
+            value={cpf}
+            onChange={(error) => [setCPF(error.target.value), setError("")]}
+          />
+          <Input
+            type="text"
+            placeholder="Digite aqui o seu nome completo"
+            value={nomeCompleto}
+            onChange={(error) => [setNomeCompleto(error.target.value), setError("")]}
+          />
+          <Input
+            type="email"
+            placeholder="Digite aqui o seu e-mail"
+            value={email}
+            onChange={(error) => [setEmail(error.target.value), setError("")]}
+          />
+          <Input
+            type="text"
+            placeholder="Digite aqui o seu celular"
+            value={celular}
+            onChange={(error) => [setCelular(error.target.value), setError("")]}
+          />
+          <Input
+            type="password"
+            placeholder="Digite aqui a sua senha"
+            value={senha}
+            onChange={(error) => [setSenha(error.target.value), setError("")]}
+          />
+          <Input
+            type="password"
+            placeholder="Confirme a sua senha"
+            value={confirmarSenha}
+            onChange={(error) => [setConfirmarSenha(error.target.value), setError("")]}
+          />
+          <C.LabelError>{error}</C.LabelError>
+          <Botao text="Cadastrar" onClick={handleCadastra} />
+          <C.LabelAcesso>
+            Já é cliente?
+            <C.Strong>
+              <Link to="/acesso">&nbsp;Acesse sua conta</Link>
+            </C.Strong>
+          </C.LabelAcesso>
+
+
+        </C.Content>
+      </C.Form>
     </C.Container>
   );
 };

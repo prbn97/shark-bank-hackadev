@@ -1,14 +1,35 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
   height: 100vh;
+
+  gap: 128px;
 `;
 
+export const Section = styled.div`
+font-size: 16px;
+  color: #676767;
+  h1{
+font-weight: 700;
+font-size: 48px;
+line-height: 58px;
+
+color: #FFFFFF;
+  }
+  span{ color: #DFA634; }
+`;
+
+export const Form = styled.div`
+
+  margin: 0;
+`;
+
+
+
+/*titulo*/
 export const Label = styled.label`
   font-size: 18px;
   font-weight: 600;
