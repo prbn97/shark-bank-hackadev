@@ -9,6 +9,23 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
+export const containerContent = styled.div`
+
+  width:70vw;
+
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  
+  background-color: red;  
+   
+`;
+
+export const containerLabel = styled.div`
+
+  
+
+`;
 export const Label = styled.label`
   font-size: 18px;
   font-weight: 600;
