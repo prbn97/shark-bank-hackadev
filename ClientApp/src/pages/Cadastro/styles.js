@@ -1,54 +1,48 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
   display: flex;
   flex-direction: row;
-  gap: 230px;
-  justify-content: center;
-  margin: auto 24px;
-  
-
-  
+  align-items: center;
+  gap: 161px;
+  margin: 148px 268px 168px ;
 `;
 
-export const Section = styled.div`
-  
-  margin-top: 200px;
-  h1{
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    color: #FFFFFF;
-  }
-  span{ color: #DFA634; }
+export const Title = styled.div`
+  min-width:438px;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #FFFFFF;
+
+  .container_title-span
+    { color: #DFA634; }
   
 
 `;
-
 export const Form = styled.div`
+  min-width: 343px;
+  height: 708px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 `;
 
 
 
 /*titulo*/
-export const Label = styled.label`
-
-
-
+export const FormTitle = styled.label`
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
   color: #EBEBEB;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 16px;
 
 `;
 /* formulário */
-export const Content = styled.div`
+export const FieldSet = styled.div`
   gap: 16px;
   display: flex;
   align-items: center;

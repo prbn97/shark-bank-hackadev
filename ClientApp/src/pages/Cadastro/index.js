@@ -41,43 +41,43 @@ const Cadastro = () => {
   return (
     <C.Container>
 
-      <C.Section>
-
-        <h1>
-        <p>Olá!</p>
-        <p>Seja bem-vindo ao</p>
-        <p><span>Shark Bank</span></p>
-        </h1>
-
-      </C.Section>
+      <C.Title>
+        Olá!<br />
+        Seja bem-vindo ao<br />
+        <span class="container_title-span">
+          Shark Bank
+          </span>
+      </C.Title>
 
 
       <C.Form>
-        <C.Label>
-          
+        <C.FormTitle>
           Cadastro
+        </C.FormTitle>
+        
+        <C.FieldSet>
           
-          </C.Label>
-        <C.Content>
-
           <Input
             type="text"
             placeholder="Digite aqui o seu CPF"
             value={cpf}
             onChange={(error) => [setCPF(error.target.value), setError("")]}
           />
+
           <Input
             type="text"
             placeholder="Digite aqui o seu nome completo"
             value={nomeCompleto}
             onChange={(error) => [setNomeCompleto(error.target.value), setError("")]}
           />
+
           <Input
             type="email"
             placeholder="Digite aqui o seu e-mail"
             value={email}
             onChange={(error) => [setEmail(error.target.value), setError("")]}
           />
+
           <Input
             type="text"
             placeholder="Digite aqui o seu celular"
@@ -90,6 +90,7 @@ const Cadastro = () => {
             value={senha}
             onChange={(error) => [setSenha(error.target.value), setError("")]}
           />
+
           <Input
             type="password"
             placeholder="Confirme a sua senha"
@@ -106,7 +107,7 @@ const Cadastro = () => {
           </C.LabelAcesso>
 
 
-        </C.Content>
+        </C.FieldSet>
       </C.Form>
       
     </C.Container>
