@@ -4,28 +4,26 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: row;
-  height: 708px;
-  width: 984px;
-  margin: 148px 228px;
+  gap: 230px;
+  justify-content: center;
+  margin: auto 24px;
+  
 
-
-  gap: 128px;
+  
 `;
 
 export const Section = styled.div`
-
-margin-top: 215px;
-
-
-h1{
-    
+  
+  margin-top: 200px;
+  h1{
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
     color: #FFFFFF;
-    
   }
   span{ color: #DFA634; }
+  
+
 `;
 
 export const Form = styled.div`
@@ -51,15 +49,13 @@ export const Label = styled.label`
 `;
 /* formulário */
 export const Content = styled.div`
-  gap: 15px;
+  gap: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
   box-shadow: 0 1px 2px #0003;
-  max-width: 350px;
-  padding: 20px;
+  padding: 24px;
   background: #D9D9D9;
   border-radius: 26px;
 `;
