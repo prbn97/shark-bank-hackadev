@@ -40,23 +40,20 @@ const Cadastro = () => {
 
   return (
     <C.Container>
-
       <C.Title>
         Olá!<br />
         Seja bem-vindo ao<br />
-        <span class="container_title-span">
+        <span className="container_title-span">
           Shark Bank
-          </span>
+        </span>
       </C.Title>
-
 
       <C.Form>
         <C.FormTitle>
           Cadastro
         </C.FormTitle>
-        
+
         <C.FieldSet>
-          
           <Input
             type="text"
             placeholder="Digite aqui o seu CPF"
@@ -84,6 +81,7 @@ const Cadastro = () => {
             value={celular}
             onChange={(error) => [setCelular(error.target.value), setError("")]}
           />
+
           <Input
             type="password"
             placeholder="Digite aqui a sua senha"
@@ -99,7 +97,7 @@ const Cadastro = () => {
           />
           <C.LabelError>{error}</C.LabelError>
 
-          <S.ButtonPrimario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonPrimario>
+          <S.ButtonPrimario text="Cadastrar" onClick={handleCadastra}>Cadastrar</S.ButtonPrimario>
 
           <C.LabelAcesso>
             Já é cliente?
@@ -107,11 +105,8 @@ const Cadastro = () => {
               <Link to="/acesso">&nbsp;Acesse sua conta</Link>
             </C.Strong>
           </C.LabelAcesso>
-
-
         </C.FieldSet>
       </C.Form>
-      
     </C.Container>
   );
 };

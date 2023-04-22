@@ -8,8 +8,6 @@ export const Container = styled.div`
   width: 100vw;
   gap: 10rem;  
   
-  
-
   .container_content {
     margin: 0;
     display: flex;
@@ -34,11 +32,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* gap: 20px; */
   }
 
   .container_painel_buttons {
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +68,7 @@ export const ContainerPainelContentTitle = styled.h2`
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.5rem 0;
-  `;
+`;
 
 export const ContainerPainelContentText = styled.p`
   text-align: center;
