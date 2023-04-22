@@ -5,10 +5,14 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 161px;
-  margin: 148px 268px 168px ;
+  margin: auto;
+  margin-top: 24px; 
 `;
 
 export const Title = styled.div`
+  @media screen and (max-width: 1023px) {
+    display: none; 
+  }
   min-width:438px;
   font-weight: 700;
   font-size: 3rem;
@@ -16,9 +20,9 @@ export const Title = styled.div`
   color: #FFFFFF;
 
   .container_title-span
-    { color: #DFA634; }
-  
-
+    { 
+      color: #DFA634;
+    }
 `;
 export const Form = styled.div`
   min-width: 343px;
@@ -27,7 +31,7 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 `;
 
 
@@ -35,32 +39,30 @@ export const Form = styled.div`
 /*titulo*/
 export const FormTitle = styled.label`
   font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2.25rem;
   color: #EBEBEB;
-  margin-bottom: 16px;
 
 `;
 /* formulário */
 export const FieldSet = styled.div`
-  gap: 16px;
+  gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 1px 2px #0003;
-  padding: 24px;
+  padding: 1.5rem;
   background: #D9D9D9;
   border-radius: 26px;
 `;
 
 export const LabelAcesso = styled.label`
-  font-size: 16px;
+  font-size: 1rem;
   color: #676767;
 `;
 
 export const LabelError = styled.label`
-  font-size: 14px;
+  font-size: .875rem;
   color: red;
 `;
 
