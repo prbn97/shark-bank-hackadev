@@ -8,27 +8,27 @@ import Input from '../../components/Input';
 import Botao from '../../components/Botao';
 
 const Acesso = () => {
-  const { acessar } = useAuth();
+
+  const { acessa } = useAuth();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [error, setError] = useState('');
+  const [cpf, setCPF] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
 
-  const handleLogin = () => {
-    if (!email | !senha) {
+  const handleAcesso = () => {
+    if (!cpf | !senha) {
       setError('Preencha todos os campos');
       return;
     }
 
-    const response = acessar(email, senha);
+    const response = acessa(cpf, senha);
 
     if (response) {
-      setError(response);
+      setError("CPF ou senha inválidos");
       return;
     }
-
-    navigate('/home');
+    navigate('/conta');
   };
 
   return (
@@ -36,19 +36,20 @@ const Acesso = () => {
       <C.Label>Acesso</C.Label>
       <C.Content>
         <Input
-          type="email"
-          placeholder="Digite aqui o seu e-mail"
-          value={email}
-          onChange={error => setEmail(error.target.value)}
+          type="text"
+          placeholder="Digite aqui o seu CPF"
+          value={cpf}
+          onChange={(error) => [setCPF(error.target.value), setError("")]}
         />
         <Input
           type="password"
           placeholder="Digite aqui a sua senha"
           value={senha}
-          onChange={error => setSenha(error.target.value)}
+
+          onChange={(error) => [setSenha(error.target.value), setError("")]}
         />
         <C.LabelError>{error}</C.LabelError>
-        <Botao text="Acessar" onClick={handleLogin} />
+        <Botao text="Acessar" onClick={handleAcesso} />
         <C.LabelCadastro>
           Ainda não é cliente?
           <C.Strong>

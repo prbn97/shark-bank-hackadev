@@ -6,15 +6,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Cadastro = () => {
-  const [cpf, setCliente] = useState('');
-  const [nomeCompleto, setNomeCompleto] = useState('');
-  const [email, setEmail] = useState('');
-  const [celular, setCelular] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmarSenha, setConfirmarSenha] = useState('');
-  const [error, setError] = useState('');
+  const [cpf, setCPF] = useState("");
+  const [nomeCompleto, setNomeCompleto] = useState("");
+  const [email, setEmail] = useState("");
+  const [celular, setCelular] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
+
   const { cadastra } = useAuth();
 
   const handleCadastra = () => {
@@ -35,9 +36,7 @@ const Cadastro = () => {
 
     alert('Cadastro realizado com sucesso!');
     navigate('/acesso');
-  }
-
-
+  };
 
   return (
     <C.Container>
@@ -47,37 +46,37 @@ const Cadastro = () => {
           type="text"
           placeholder="Digite aqui o seu CPF"
           value={cpf}
-          onChange={error => [setCliente(error.target.value).setError("")]}
+          onChange={(error) => [setCPF(error.target.value),setError("")]}
         />
         <Input
           type="text"
           placeholder="Digite aqui o seu nome completo"
           value={nomeCompleto}
-          onChange={error => [setNomeCompleto(error.target.value).setError("")]}
+          onChange={(error) => [setNomeCompleto(error.target.value),setError("")]}
         />
         <Input
           type="email"
           placeholder="Digite aqui o seu e-mail"
           value={email}
-          onChange={error => [setEmail(error.target.value).setError("")]}
+          onChange={(error) => [setEmail(error.target.value),setError("")]}
         />
         <Input
           type="text"
           placeholder="Digite aqui o seu celular"
           value={celular}
-          onChange={error => [setCelular(error.target.value).setError("")]}
+          onChange={(error) => [setCelular(error.target.value),setError("")]}
         />
         <Input
           type="password"
           placeholder="Digite aqui a sua senha"
           value={senha}
-          onChange={error => [setSenha(error.target.value).setError("")]}
+          onChange={(error) => [setSenha(error.target.value),setError("")]}
         />
         <Input
           type="password"
           placeholder="Confirme a sua senha"
           value={confirmarSenha}
-          onChange={error => [setConfirmarSenha(error.target.value).setError("")]}
+          onChange={(error) => [setConfirmarSenha(error.target.value),setError("")]}
         />
         <C.LabelError>{error}</C.LabelError>
         <Botao text="Cadastrar" onClick={handleCadastra} />
