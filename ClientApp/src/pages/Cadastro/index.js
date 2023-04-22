@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Input from '../../components/Input'
 import Botao from '../../components/Botao'
 import * as C from './styles'
+import * as S from '../../components/Botao/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -98,7 +99,9 @@ const Cadastro = () => {
             onChange={(error) => [setConfirmarSenha(error.target.value), setError("")]}
           />
           <C.LabelError>{error}</C.LabelError>
-          <Botao text="Cadastrar" onClick={handleCadastra} />
+
+          <S.ButtonPrimario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonPrimario>
+
           <C.LabelAcesso>
             Já é cliente?
             <C.Strong>
