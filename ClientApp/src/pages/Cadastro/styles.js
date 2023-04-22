@@ -4,38 +4,52 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 708px;
+  width: 984px;
+  margin: 148px 228px;
+
 
   gap: 128px;
 `;
 
 export const Section = styled.div`
-font-size: 16px;
-  color: #676767;
-  h1{
-font-weight: 700;
-font-size: 48px;
-line-height: 58px;
 
-color: #FFFFFF;
+margin-top: 215px;
+
+
+h1{
+    
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    
   }
   span{ color: #DFA634; }
 `;
 
 export const Form = styled.div`
-
-  margin: 0;
 `;
 
 
 
 /*titulo*/
 export const Label = styled.label`
-  font-size: 18px;
-  font-weight: 600;
-  color: #676767;
-`;
 
+
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #EBEBEB;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+`;
+/* formulário */
 export const Content = styled.div`
   gap: 15px;
   display: flex;
@@ -44,10 +58,10 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   box-shadow: 0 1px 2px #0003;
-  background-color: white;
   max-width: 350px;
   padding: 20px;
-  border-radius: 5px;
+  background: #D9D9D9;
+  border-radius: 26px;
 `;
 
 export const LabelAcesso = styled.label`

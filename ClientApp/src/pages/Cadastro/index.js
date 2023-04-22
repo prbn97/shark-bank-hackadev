@@ -41,12 +41,14 @@ const Cadastro = () => {
   return (
     <C.Container>
 
-      <C.Section><h1>
+      <C.Section>
 
+        <h1>
         <p>Olá!</p>
         <p>Seja bem-vindo ao</p>
         <p><span>Shark Bank</span></p>
         </h1>
+
       </C.Section>
 
 
@@ -106,6 +108,7 @@ const Cadastro = () => {
 
         </C.Content>
       </C.Form>
+      
     </C.Container>
   );
 };
