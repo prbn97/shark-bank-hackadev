@@ -5,10 +5,16 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 161px;
-  margin: 148px 268px 168px ;
+  margin: auto;
+  margin-top: 24px;
+
+  
 `;
 
 export const Title = styled.div`
+  @media screen and (max-width: 1023px) {
+    display: none; 
+  }
   min-width:438px;
   font-weight: 700;
   font-size: 3rem;
