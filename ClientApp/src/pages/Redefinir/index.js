@@ -11,27 +11,30 @@ function RedefinirSenha() {
   return (
     <C.Container>
 
-      <div class="mainContent-style">
-
-        <img src={tubaraoConversando1} alt=''/>
+      <div className= 'mainContent-style'>
+         <div className='main_image-responsive'>
+            <img src={tubaraoConversando1} alt=''/>
+         </div>
 
         <C.Form>
           <C.FormTitle>
-          Redefinir senhas
+            Redefinir senhas
           </C.FormTitle>
 
           <C.FieldSet>
-            <div class="fieldSet_text">
+            <div className='fieldSet_text'>
             Para redefinir a sua senha, informe o e-mail cadastrado na sua e lhe enviaremos um link com as intruções.
             </div>
 
             <Input
             type="email"
             placeholder="Digite aqui o seu e-mail"/>
+            
+            <div className='container_botoes'>
+              <S.ButtonPrimario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonPrimario>
+              <S.ButtonSecundario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonSecundario>
+            </div>
 
-
-            <S.ButtonPrimario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonPrimario>
-            <S.ButtonSecundario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonSecundario>
           </C.FieldSet>
         </C.Form>
         

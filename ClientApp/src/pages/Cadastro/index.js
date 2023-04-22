@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Input from '../../components/Input'
-import Botao from '../../components/Botao'
 import * as C from './styles'
 import * as S from '../../components/Botao/styles';
 import { Link, useNavigate } from 'react-router-dom';
