@@ -76,9 +76,14 @@ export const Strong = styled.strong`
 
 export const CheckBox = styled.div`
 
+position: relative;
+
 //checkbox funcional
 input{
-  display: none;
+  position: absolute;
+  Width: 24px;
+  Height: 24px;
+  opacity: 0;
 
 }
 //checkbox visual -estilo
