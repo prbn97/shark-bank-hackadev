@@ -6,14 +6,12 @@ export const Container = styled.div`
   .mainContent-style{
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  margin: 5rem;
-  /*margin-top: 248px;*/
-  gap: 8rem;
+  align-content: center;
+  margin-top: 25vh;
+  gap: 10rem;
   }
   .main_image-responsive{
-    @media screen and (max-width: 64rem){
+    @media screen and (max-width: 1023px){
       display: none;
     }
   }
