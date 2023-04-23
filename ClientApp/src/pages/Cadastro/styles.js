@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 161px;
   margin: auto;
-  margin-top: 100px; 
+  margin-top: 150px; 
 `;
 
 export const Title = styled.div`
@@ -76,6 +76,7 @@ export const Strong = styled.strong`
 
 export const CheckBox = styled.div`
 
+<<<<<<< HEAD
 position: relative;
 
 //checkbox funcional
@@ -115,6 +116,13 @@ label{
   align-items: center;
   gap: 0.5rem;
   
+=======
+.checkBox_estilo{
+  width: 24px;
+  height: 24px;
+  
+
+>>>>>>> parent of 69dbed6 (:lipstick: :recycle: Ajuste na estilização de margens e espaçamentos)
 }
 
 

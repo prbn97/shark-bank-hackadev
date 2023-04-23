@@ -35,10 +35,10 @@ export const containerLabel = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 600;
   color: #ebebeb;
-  margin-bottom: .5 rem
+  
 `;
 
 export const Content = styled.div`

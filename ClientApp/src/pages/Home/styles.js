@@ -2,16 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  gap: 8rem;
+  gap: 10rem;  
   
   .container_content {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    width: 45%;   
   }
 
   
@@ -21,7 +23,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 5rem;
-    min-width: 25%;
+    width: 25%;
     background: #D9D9D9;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
     border-radius: 1.625rem;
