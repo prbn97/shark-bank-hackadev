@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 161px;
   margin: auto;
-  margin-top: 150px; 
+  margin-top: 100px; 
 `;
 
 export const Title = styled.div`
@@ -75,10 +75,11 @@ export const Strong = styled.strong`
 `;
 
 export const CheckBox = styled.div`
+  display: flex;
+  gap: 8px;
 
 .checkBox_estilo{
-  width: 24px;
-  height: 24px;
+  
   
 
 }
