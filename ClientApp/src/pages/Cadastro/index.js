@@ -18,7 +18,7 @@ const Cadastro = () => {
 
   const { cadastra } = useAuth();
 
-  const handleCadastra = () => {
+  const handleCadastra = async () => {
     if (!cpf | !nomeCompleto | !email | !celular | !senha | !confirmarSenha) {
       setError('Preencha todos os campos');
       return;
@@ -27,7 +27,7 @@ const Cadastro = () => {
       return;
     }
 
-    const response = cadastra(cpf, nomeCompleto, email, celular, senha);
+    const response = await cadastra(cpf, nomeCompleto, email, celular, senha);
 
     if (response) {
       setError(response);

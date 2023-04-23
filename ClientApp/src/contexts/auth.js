@@ -42,26 +42,35 @@ export const AuthProvider = ({ children }) => {
     };
 
     //cpf, nomeCompleto, email, celular, senha
-    const cadastra = (cpf, nomeCompleto, email, celular, senha) => {
+    const cadastra = async (cpf, nomeCompleto, email, celular, senha) => {
+        let clienteToken;
+        do {
+            clienteToken = Math.random().toString(36).substring(7);
+        } while (clienteToken.length < 5);
+        console.log(clienteToken)
 
-        const clientesStorage = localStorage.getItem("clientes_db");
+        const cliente = {
+            // cpfAcesso: cpf,
+            id: clienteToken,
+            nomeCliente: nomeCompleto,
+            emailCliente: email,
+            celularCliente: celular,
+            ativoCliente: true
+            // senhaAcesso: senha
+        };
 
-        const temCliente = JSON.parse(clientesStorage)?.filter((cliente) => cliente.cpf === cpf);
+        const response = await fetch('https://localhost:7201/api/Cliente', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(cliente)
+        });
 
-        if (temCliente?.length) {
-            return "Cliente já cadastrado";
+        if (!response.ok) {
+            return 'Ocorreu um erro ao realizar o cadastro';
         }
 
-        let novoCliente;
-
-        if (clientesStorage) {
-            novoCliente = [...clientesStorage, { cpf, nomeCompleto, email, celular, senha }];
-        } else {
-            novoCliente = [{ cpf, nomeCompleto, email, celular, senha }];
-        }
-
-        localStorage.setItem("clientes_db", JSON.stringify(novoCliente));
-        return;
 
     };
 
