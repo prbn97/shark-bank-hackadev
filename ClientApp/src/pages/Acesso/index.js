@@ -38,7 +38,8 @@ const Acesso = () => {
   return (
     <C.Container>
         <C.containerContent>
-          <img src={imagemTubarao} alt="Tubarão dando olá" />
+          
+          <C.LogoTubarao src={imagemTubarao} alt="Tubarão dando olá" />
           <C.containerLabel>
 
             <C.Label>Acesso</C.Label>

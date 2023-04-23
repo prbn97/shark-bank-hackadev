@@ -20,6 +20,10 @@ export const containerContent = styled.div`
   
    
 `;
+export const LogoTubarao = styled.img`
+
+
+`;
 
 export const containerLabel = styled.div`
 
