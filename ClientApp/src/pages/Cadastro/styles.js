@@ -75,17 +75,46 @@ export const Strong = styled.strong`
 `;
 
 export const CheckBox = styled.div`
+
+//checkbox funcional
+input{
+  display: none;
+
+}
+//checkbox visual -estilo
+label::before{
+  content: '';
+  display: block;
+  Width: 24px;
+  Height: 24px;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+//check box aceito -estilo
+input:checked + label::before {
+  background: #DFA634;
+  border: 2px solid #000000;
+}
+//houver do checkbox -estilo
+input:hover + label::before{  
+  border: 2px solid #000000;
+}
+
+//alinhamento do checkbox visual com o texto
+label{
+  font-weight: 600;
+  font-size: 12px;
+  color: #111B59;
   display: flex;
-  gap: 8px;
-
-.checkBox_estilo{
+  align-items: center;
+  gap: 0.5rem;
   
-  
-
 }
-.checkBox_estilo:hover{
 
-}
+
+
+label a{ color: #DFA634; }
 
 `;
 

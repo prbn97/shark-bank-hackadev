@@ -98,13 +98,17 @@ const Cadastro = () => {
           <C.LabelError>{error}</C.LabelError>
 
           <C.CheckBox>
-                  <input type='checkbox' name="Lembrar conta"></input>
-                  <label className='TextRememberAccount'
-                  >Li e entendi os 
-                  <a href="#"> Termos de Contrato</a>
-                  <br /> de criação de conta e concordo 
-                  <br /> em prosseguir com o processo. 
+                  <input 
+                  type='checkbox'
+                  id='accept-terms'
+                  />
+
+                  <label for='accept-terms'
+                  ><p>Li e entendi os 
+                    <a href="/termos"> Termos de Contrato</a> <br /> de criação de conta e concordo <br /> em prosseguir com o processo.
+                  </p> 
                   </label>
+
             </C.CheckBox>
 
           <S.ButtonPrimario text="Cadastrar" onClick={handleCadastra}>Cadastrar</S.ButtonPrimario>
