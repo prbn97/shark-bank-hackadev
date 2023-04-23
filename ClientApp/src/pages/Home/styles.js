@@ -13,8 +13,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 45%;   
   }
+
+  
 
   .container_painel {
     display: flex;
@@ -27,6 +29,20 @@ export const Container = styled.div`
     border-radius: 1.625rem;
   }
 
+  @media screen and (max-width: 980px) {
+    justify-content: center;
+
+    .container_content {
+      display: none;
+    }
+
+    .container_painel{
+      padding: 0 1rem;
+      width: auto;
+    }
+    
+  }
+
   .container_painel_content {
     display: flex;
     align-items: center;
@@ -34,6 +50,7 @@ export const Container = styled.div`
     flex-direction: column;
   }
 
+  
   .container_painel_buttons {
     display: flex;
     align-items: center;
