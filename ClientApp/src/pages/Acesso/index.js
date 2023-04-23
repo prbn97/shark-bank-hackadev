@@ -7,6 +7,10 @@ import * as C from './styles'
 import Input from '../../components/Input';
 import Botao from '../../components/Botao';
 
+import imagemTubarao from '../../assets/images/tubarao-dando-ola.svg'
+
+import * as S from '../../components/Botao/styles';
+
 const Acesso = () => {
 
   const { acessa } = useAuth();
@@ -33,30 +37,53 @@ const Acesso = () => {
 
   return (
     <C.Container>
-      <C.Label>Acesso</C.Label>
-      <C.Content>
-        <Input
-          type="text"
-          placeholder="Digite aqui o seu CPF"
-          value={cpf}
-          onChange={(error) => [setCPF(error.target.value), setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Digite aqui a sua senha"
-          value={senha}
+        <C.containerContent>
+          
+          <C.LogoTubarao src={imagemTubarao} alt="Tubarão dando olá" />
+          <C.containerLabel>
 
-          onChange={(error) => [setSenha(error.target.value), setError("")]}
-        />
-        <C.LabelError>{error}</C.LabelError>
-        <Botao text="Acessar" onClick={handleAcesso} />
-        <C.LabelCadastro>
-          Ainda não é cliente?
-          <C.Strong>
-            <Link to="/cadastro">&nbsp;Cadastre-se</Link>
-          </C.Strong>
-        </C.LabelCadastro>
-      </C.Content>
+            <C.Label>Acesso</C.Label>
+            <C.Content>
+              <Input
+                type="text"
+                placeholder="Digite aqui o seu CPF"
+                value={cpf}
+                onChange={(error) => [setCPF(error.target.value), setError("")]}
+                />
+              <Input
+                type="password"
+                placeholder="Digite aqui a sua senha"
+                value={senha}
+                
+                onChange={(error) => [setSenha(error.target.value), setError("")]}
+                />
+              <C.LabelError>{error}</C.LabelError>
+
+              <C.ContentAccountPassword>
+
+                <C.RememberAccount>
+                  <input type='checkbox' name="Lembrar conta"></input>
+                  <p className='TextRememberAccount'>Lembrar conta </p>
+
+                </C.RememberAccount>
+
+                <C.ForgetPassword>
+                  <a> Esqueci a senha</a>
+
+                </C.ForgetPassword>
+
+              </C.ContentAccountPassword>
+              <S.ButtonPrimario>Acessar</S.ButtonPrimario>
+              <C.LabelCadastro>
+                Ainda não é cliente?
+                <C.Strong>
+                  <Link to="/cadastro">&nbsp;Cadastre-se</Link>
+                </C.Strong>
+              </C.LabelCadastro>
+            </C.Content>
+          </C.containerLabel>
+
+        </C.containerContent>
     </C.Container>
   );
 };
