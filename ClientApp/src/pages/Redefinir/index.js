@@ -4,7 +4,7 @@ import Input from '../../components/Input'
 
 import * as S from '../../components/Botao/styles';
 
-import tubaraoConversando1 from '../../assets/images/tubarao-conversando.png'
+import tubaraoConversando from '../../assets/images/tubarao-conversando.png'
 
 
 function RedefinirSenha() {
@@ -13,7 +13,7 @@ function RedefinirSenha() {
 
       <div className= 'mainContent-style'>
          <div className='main_image-responsive'>
-            <img src={tubaraoConversando1} alt=''/>
+            <img src={tubaraoConversando} alt=''/>
          </div>
 
         <C.Content>

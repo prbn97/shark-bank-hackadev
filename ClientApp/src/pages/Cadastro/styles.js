@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 161px;
   margin: auto;
-  margin-top: 24px; 
+  margin-top: 150px; 
 `;
 
 export const Title = styled.div`
@@ -19,7 +19,7 @@ export const Title = styled.div`
   line-height: 3rem;
   color: #FFFFFF;
 
-  .container_title-span
+  .container_titulo-destaque
     { 
       color: #DFA634;
     }
@@ -73,3 +73,56 @@ export const Strong = styled.strong`
     color: #676767;
   }
 `;
+
+export const CheckBox = styled.div`
+
+position: relative;
+
+//checkbox funcional
+input{
+  position: absolute;
+  Width: 24px;
+  Height: 24px;
+  opacity: 0;
+
+}
+//checkbox visual -estilo
+label::before{
+  content: '';
+  display: block;
+  Width: 24px;
+  Height: 24px;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+//check box aceito -estilo
+input:checked + label::before {
+  background: #DFA634;
+  border: 2px solid #000000;
+}
+//houver do checkbox -estilo
+input:hover + label::before{  
+  border: 2px solid #000000;
+}
+input:focus + label::before{  
+  border: 2px solid #000000;
+}
+
+//alinhamento do checkbox visual com o texto
+label{
+  font-weight: 600;
+  font-size: 12px;
+  color: #111B59;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+
+
+
+label a{ color: #DFA634; }
+
+`;
+

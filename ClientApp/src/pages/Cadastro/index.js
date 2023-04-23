@@ -43,7 +43,7 @@ const Cadastro = () => {
       <C.Title>
         Olá!<br />
         Seja bem-vindo ao<br />
-        <span className="container_title-span">
+        <span className="container_titulo-destaque">
           Shark Bank
         </span>
       </C.Title>
@@ -96,6 +96,20 @@ const Cadastro = () => {
             onChange={(error) => [setConfirmarSenha(error.target.value), setError("")]}
           />
           <C.LabelError>{error}</C.LabelError>
+
+          <C.CheckBox>
+                  <input 
+                  type='checkbox'
+                  id='accept-terms'
+                  />
+
+                  <label for='accept-terms'
+                  ><p>Li e entendi os 
+                    <a href="/termos"> Termos de Contrato</a> <br /> de criação de conta e concordo <br /> em prosseguir com o processo.
+                  </p> 
+                  </label>
+
+            </C.CheckBox>
 
           <S.ButtonPrimario text="Cadastrar" onClick={handleCadastra}>Cadastrar</S.ButtonPrimario>
 

@@ -5,7 +5,6 @@ import useAuth from '../../hooks/useAuth';
 import * as C from './styles'
 
 import Input from '../../components/Input';
-import Botao from '../../components/Botao';
 
 import imagemTubarao from '../../assets/images/tubarao-dando-ola.svg'
 
@@ -68,12 +67,12 @@ const Acesso = () => {
                 </C.RememberAccount>
 
                 <C.ForgetPassword>
-                  <a> Esqueci a senha</a>
+                  <a href='/redefinir'> Esqueci a senha</a>
 
                 </C.ForgetPassword>
 
               </C.ContentAccountPassword>
-              <S.ButtonPrimario>Acessar</S.ButtonPrimario>
+              <S.ButtonPrimario text="Acessar" onClick={handleAcesso}>Acessar</S.ButtonPrimario>
               <C.LabelCadastro>
                 Ainda não é cliente?
                 <C.Strong>
