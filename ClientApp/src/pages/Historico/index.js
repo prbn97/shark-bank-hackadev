@@ -1,10 +1,65 @@
 import React from 'react'
+import * as C from './styles'
+import userIcon from '../../assets/images/userIcon.svg';
+import notificationButton from '../../assets/images/notificationButton.svg';
+import Input from '../../components/Input';
+import DepositarIcon from '../../assets/images/DepositarIcon.svg';
+
 
 function Historico() {
     return (
-        <div>
-            <h1 color='red'>Historico</h1>
-        </div>
+        <C.Container>
+           
+            <C.User>
+             <img src={userIcon} alt='icone com a inicial do usuário'/>
+             <div className='UserName'>Olá, Lenny</div>
+             <img src={notificationButton} alt='icone com a inicial do usuário'/>
+            </C.User>
+            
+            <C.Search>
+              <Input className = 'input' type= "text"
+               placeholder="Digite aqui o seu CPF"/>
+            </C.Search>
+
+            <C.ContainerHistorico>
+               <div className='Trasnferencia'>
+              
+                  <img src={DepositarIcon} alt="" />
+              
+                 <section className='TrasnferenciaTexto'>
+                 <h3>Transferência enviada (tipo)</h3>
+                  <h3>Beneficiário</h3>
+                  <h3><span>R$ 0000,00</span></h3>
+                 </section>
+
+                 <section className='TrasnferenciaMes'>
+                  <h3>00 MÊS</h3>
+                 </section>
+
+                 </div>
+            </C.ContainerHistorico>
+
+            <C.ContainerHistorico>
+               <div className='Trasnferencia'>
+              
+                  <img src={DepositarIcon} alt="" />
+              
+                 <section className='TrasnferenciaTexto'>
+                 <h3>Transferência enviada (tipo)</h3>
+                  <h3>Beneficiário</h3>
+                  <h3><span>R$ 0000,00</span></h3>
+                 </section>
+
+                 <section className='TrasnferenciaMes'>
+                  <h3>00 MÊS</h3>
+                 </section>
+
+                 </div>
+            </C.ContainerHistorico>
+            
+           
+
+        </C.Container>
     )
 }
 
