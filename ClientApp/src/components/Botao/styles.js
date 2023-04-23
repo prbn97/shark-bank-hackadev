@@ -21,6 +21,9 @@ export const ButtonPrimario = styled.button`
   padding: 8px;
   gap: 8px;
 
+  color: #FFF;
+  font-size: 1.25rem;
+
   width: 184px;
   height: 48px;
   left: 21px;
@@ -41,6 +44,8 @@ export const ButtonSecundario = styled.button`
   padding: 8px;
   gap: 8px;
   border: none;
+
+  font-size: 1.25rem;
 
   width: 184px;
   height: 48px;
