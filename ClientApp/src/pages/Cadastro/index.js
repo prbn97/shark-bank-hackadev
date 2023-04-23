@@ -43,7 +43,7 @@ const Cadastro = () => {
       <C.Title>
         Olá!<br />
         Seja bem-vindo ao<br />
-        <span className="container_title-span">
+        <span className="container_titulo-destaque">
           Shark Bank
         </span>
       </C.Title>
@@ -96,6 +96,15 @@ const Cadastro = () => {
             onChange={(error) => [setConfirmarSenha(error.target.value), setError("")]}
           />
           <C.LabelError>{error}</C.LabelError>
+
+          <C.CheckBox>
+
+            <input type='checkbox' className='checkBox_estilo' />
+
+            <div className='checkBox-estilo-texto'>
+
+            </div>
+            </C.CheckBox>
 
           <S.ButtonPrimario text="Cadastrar" onClick={handleCadastra}>Cadastrar</S.ButtonPrimario>
 

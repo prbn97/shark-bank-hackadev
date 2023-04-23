@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 161px;
   margin: auto;
-  margin-top: 24px; 
+  margin-top: 150px; 
 `;
 
 export const Title = styled.div`
@@ -19,7 +19,7 @@ export const Title = styled.div`
   line-height: 3rem;
   color: #FFFFFF;
 
-  .container_title-span
+  .container_titulo-destaque
     { 
       color: #DFA634;
     }
@@ -73,3 +73,18 @@ export const Strong = styled.strong`
     color: #676767;
   }
 `;
+
+export const CheckBox = styled.div`
+
+.checkBox_estilo{
+  width: 24px;
+  height: 24px;
+  
+
+}
+.checkBox_estilo:hover{
+
+}
+
+`;
+
