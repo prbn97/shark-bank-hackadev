@@ -9,6 +9,8 @@ import Botao from '../../components/Botao';
 
 import imagemTubarao from '../../assets/images/tubarao-dando-ola.svg'
 
+import * as S from '../../components/Botao/styles';
+
 const Acesso = () => {
 
   const { acessa } = useAuth();
@@ -55,7 +57,22 @@ const Acesso = () => {
                 onChange={(error) => [setSenha(error.target.value), setError("")]}
                 />
               <C.LabelError>{error}</C.LabelError>
-              <Botao text="Acessar" onClick={handleAcesso} />
+
+              <C.ContentAccountPassword>
+
+                <C.RememberAccount>
+                  <input type='checkbox' name="Lembrar conta"></input>
+                  <p className='TextRememberAccount'>Lembrar conta </p>
+
+                </C.RememberAccount>
+
+                <C.ForgetPassword>
+                  <a> Esqueci a senha</a>
+
+                </C.ForgetPassword>
+
+              </C.ContentAccountPassword>
+              <S.ButtonPrimario>Acessar</S.ButtonPrimario>
               <C.LabelCadastro>
                 Ainda não é cliente?
                 <C.Strong>
