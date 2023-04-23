@@ -16,12 +16,12 @@ function RedefinirSenha() {
             <img src={tubaraoConversando1} alt=''/>
          </div>
 
-        <C.Form>
-          <C.FormTitle>
+        <C.Content>
+          <C.ContainerContentTitle>
             Redefinir senhas
-          </C.FormTitle>
+          </C.ContainerContentTitle>
 
-          <C.FieldSet>
+          <C.ContainerContentField>
             <div className='fieldSet_text'>
             Para redefinir a sua senha, informe o e-mail cadastrado na sua e lhe enviaremos um link com as intruções.
             </div>
@@ -31,12 +31,12 @@ function RedefinirSenha() {
             placeholder="Digite aqui o seu e-mail"/>
             
             <div className='container_botoes'>
-              <S.ButtonPrimario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonPrimario>
-              <S.ButtonSecundario text="Cadastrar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Cadastrar</S.ButtonSecundario>
+              <S.ButtonPrimario text="Enviar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Enviar</S.ButtonPrimario>
+              <S.ButtonSecundario text="Voltar" onClick={() => [alert("Cadastro feito com sucesso?! *Fazer lógica para tela de acesso")]}>Voltar</S.ButtonSecundario>
             </div>
 
-          </C.FieldSet>
-        </C.Form>
+          </C.ContainerContentField>
+        </C.Content>
         
       </div>
       

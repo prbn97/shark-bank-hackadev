@@ -6,14 +6,14 @@ export const Container = styled.div`
   .mainContent-style{
   display: flex;
   justify-content: center;
-  width: 984px;
-  height: 472px;
-  margin: auto;
-  margin-top: 248px;
-  gap: 161px;
+  width: 100%;
+  height: 100vh;
+  margin: 5rem;
+  /*margin-top: 248px;*/
+  gap: 8rem;
   }
   .main_image-responsive{
-    @media screen and (max-width: 1023px){
+    @media screen and (max-width: 64rem){
       display: none;
     }
   }
@@ -21,32 +21,32 @@ export const Container = styled.div`
 `;
 
 
-export const Form = styled.div`
-  min-width: 343px;
-  height: 708px;
+export const Content = styled.div`
+  min-width: 21.5rem;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 
 `;
 
-export const FormTitle = styled.div`
+export const ContainerContentTitle = styled.div`
   font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2rem;
+  line-height: 2.75rem;
 
   color: #EBEBEB;
 `;
 
-export const FieldSet = styled.div`
-  width: 343px;
-  height: 344px;
-  padding: 24px;
+export const ContainerContentField = styled.div`
+  width: 21.5rem;
+  height: 343px;
+  padding: 1.5rem;
 
   background: #D9D9D9;
-  border-radius: 26px;
+  border-radius: 1.5rem;
   
   .fieldSet_text{
     font-weight: 500;
@@ -60,7 +60,7 @@ export const FieldSet = styled.div`
   flex-direction:column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
 
   .container_botoes{
     display: flex;
