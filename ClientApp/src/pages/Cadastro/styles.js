@@ -76,7 +76,6 @@ export const Strong = styled.strong`
 
 export const CheckBox = styled.div`
 
-<<<<<<< HEAD
 position: relative;
 
 //checkbox funcional
@@ -106,6 +105,9 @@ input:checked + label::before {
 input:hover + label::before{  
   border: 2px solid #000000;
 }
+input:focus + label::before{  
+  border: 2px solid #000000;
+}
 
 //alinhamento do checkbox visual com o texto
 label{
@@ -116,13 +118,6 @@ label{
   align-items: center;
   gap: 0.5rem;
   
-=======
-.checkBox_estilo{
-  width: 24px;
-  height: 24px;
-  
-
->>>>>>> parent of 69dbed6 (:lipstick: :recycle: Ajuste na estilização de margens e espaçamentos)
 }
 
 
