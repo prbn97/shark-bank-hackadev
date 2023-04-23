@@ -7,6 +7,17 @@ using sharp_coders_hackadev.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Este código adiciona uma política CORS que permite solicitações de qualquer origem
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
@@ -42,9 +53,13 @@ else
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();
 app.UseIdentityServer();
