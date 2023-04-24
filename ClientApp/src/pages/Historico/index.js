@@ -15,16 +15,16 @@ function Historico() {
              <img src={notificationButton} alt='icone com a inicial do usuário'/>
             </C.User>
            
-           
-           <C.Input
-                type= "text"
-                placeholder=''
-            />
-           
-           
-            
-            
+           <C.Content>
+               <C.ContainerContent>
+                  Historico
+               </C.ContainerContent>
 
+               <C.Input type='text'
+                 placeholder=""
+               />
+           </C.Content>
+           
             <C.ContainerHistorico>
                <div className='Trasnferencia'>
               
