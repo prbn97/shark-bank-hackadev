@@ -18,18 +18,38 @@ const Acesso = () => {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
 
-  const handleAcesso = () => {
+  const handleAcesso = async () => {
     if (!cpf | !senha) {
       setError('Preencha todos os campos');
       return;
     }
 
-    const response = acessa(cpf, senha);
+    const response = await acessa(cpf, senha);
 
-    if (response) {
-      setError("CPF ou senha inválidos");
-      return;
+    console.log(response);
+
+    switch (response) {
+      case 200:
+        console.log("Acesso permitido");
+        break;
+      case 400:
+        setError("CPF ou senha inválidas");
+        break;
+      case 404:
+        setError("Cliente não cadastrado");
+        break;
+      case 500:
+        setError("Erro interno");
+        break;
+      case 503:
+        setError("Serviço indisponível");
+        break;
+      default:
+        setError("Erro desconhecido");
+        break;
+
     }
+
     navigate('/conta');
   };
 

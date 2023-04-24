@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 161px;
   margin: auto;
-  margin-top: 150px; 
+  margin-top: 3rem; 
 `;
 
 export const Title = styled.div`

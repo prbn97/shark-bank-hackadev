@@ -22,21 +22,33 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const acessa = async (cpf, senha) => {
-        const response = await fetch(`https://localhost:7201/api/Acesso?cpf=${cpf}&senha=${senha}`);
+        const response = await fetch(`https://localhost:7201/api/Acesso`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ cpfAcesso: cpf, senhaAcesso: senha })
+        });
+
         if (response.ok) {
-            const cliente = await response.json();
+
+            const clienteToken = Math.random().toString(36).substring(2);
+            localStorage.setItem("cliente_token", JSON.stringify({ cpf, token: clienteToken }));
+
+            setCliente(cpf, senha);
+
             if (cliente) {
                 const clienteToken = Math.random().toString(36).substring(2);
                 localStorage.setItem("cliente_token", JSON.stringify({ cpf, token: clienteToken }));
-                setCliente(cliente);
-                return;
-            } else {
-                return "CPF ou senha inválidos";
+                setCliente(cpf, senha);
+                return response.status;
             }
         } else {
-            return "Erro ao acessar o banco de dados";
+            return response.status;
         }
     };
+
+
 
     //cpf, nomeCompleto, email, celular, senha
     const cadastra = async (cpf, nomeCompleto, email, celular, senha) => {
