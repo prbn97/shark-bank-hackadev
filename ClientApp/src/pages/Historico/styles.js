@@ -34,17 +34,11 @@ export const ContainerContent= styled.div`
 `;
 
 export const Input = styled.input`
-  /*background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);*/
- /* border-radius: 5px;*/
-  /*border: 1px solid white;*/
   box-sizing: border-box;
- /* border: 1px solid #1B85C3;*/
-  /*border-radius: 26px;*/
   outline: none;
   padding: 1rem 1.25rem;
   width: 100%;
   align-items: center;
-  /*background-color: red;*/
   background: linear-gradient(112.48deg, rgba(255, 255, 255, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
   border: 3px solid #FFFFFF;
   border-radius: 26px;
@@ -70,7 +64,6 @@ export const ContainerHistorico = styled.div`
     .TrasnferenciaTexto{
     display: flex;
     gap: 2.5rem;
-    /*flex-direction: column;*/
     justify-content: center;
     color: #E6E6E6;
     }
