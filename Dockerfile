@@ -18,4 +18,4 @@ COPY --from=publish /app/publish .
 
 # Usa porta dinãrnica do Heroku
 
-CMD ASPNETCORE_URLS="<http://*:$PORT"> dotnet sharp-coders-hackadev.dll
+CMD ASPNETCORE_URLS="<https://*:$PORT"> dotnet sharp-coders-hackadev.dll
