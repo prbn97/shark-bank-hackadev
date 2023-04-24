@@ -9,29 +9,21 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const containerContent = styled.div`
-
+export const ContainerContent = styled.div`
   width:70vw;
-
   display: flex;
   align-items:center;
   justify-content:space-around;
-  
-  
-   
-`;
+  `;
+
 export const LogoTubarao = styled.img`
-
-
 `;
 
-export const ContainerLabel = styled.div`
-
+export const ContainerComponents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-
 `;
 
 export const Label = styled.label`
@@ -56,41 +48,31 @@ export const Content = styled.div`
   border-radius: 26px;
 `;
 
-export const LabelCadastro = styled.label`
-  font-size: 16px;
-  color: #676767;
-`;
-
 export const LabelError = styled.label`
   font-size: 14px;
   color: red;
 `;
+
 export const ContentAccountPassword = styled.div`
 width: 95%;
-
 display: flex;
 justify-content: space-around;
 gap: 10px;
-
-
 `;
 export const RememberAccount = styled.div`
 display: flex;
 
-.TextRememberAccount{
-  
-  margin-left: 5px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  color: #345170;
-}
+  .TextRememberAccount{
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #345170;
+  }
 `;
 
-
-export const ForgetPassword = styled.a`
+export const ForgetPassword = styled.div`
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -101,8 +83,13 @@ export const ForgetPassword = styled.a`
 
 export const Strong = styled.strong`
   cursor: pointer;
-  a {
+  .cadastro_link{
     text-decoration: none;
     color: #676767;
   }
+`;
+
+export const LabelCadastro = styled.label`
+  font-size: 16px;
+  color: #676767;
 `;

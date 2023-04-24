@@ -21,20 +21,23 @@ export const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const acessa = async (cpf, senha) => {
-        const response = await fetch(`https://localhost:7201/api/Acesso?cpf=${cpf}&senha=${senha}`);
-        if (response.ok) {
-            const cliente = await response.json();
-            if (cliente) {
+    const acessa = (cpf, senha) => {
+        const clientesStorage = localStorage.getItem("clientes_db");
+
+        const temCliente = JSON.parse(clientesStorage)?.filter((cliente) => cliente.cpf === cpf && cliente.senha === senha);
+
+        if (temCliente?.length) {
+            if (temCliente[0].cpf === cpf && temCliente[0].senha === senha) {
+
                 const clienteToken = Math.random().toString(36).substring(2);
                 localStorage.setItem("cliente_token", JSON.stringify({ cpf, token: clienteToken }));
-                setCliente(cliente);
+                setCliente({ cpf, senha });
                 return;
             } else {
                 return "CPF ou senha inválidos";
             }
         } else {
-            return "Erro ao acessar o banco de dados";
+            return "Cliente não cadastrado";
         }
     };
 
@@ -68,7 +71,7 @@ export const AuthProvider = ({ children }) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(cliente)
-        });
+        });   
 
         if (!responseCliente.ok) {
             return 'Ocorreu um erro ao realizar o cadastro';

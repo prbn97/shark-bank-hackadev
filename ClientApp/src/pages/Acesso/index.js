@@ -3,12 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 import * as C from './styles'
+import * as S from '../../components/Botao/styles';
 
 import Input from '../../components/Input';
-
 import imagemTubarao from '../../assets/images/tubarao-dando-ola.svg'
 
-import * as S from '../../components/Botao/styles';
 
 const Acesso = () => {
 
@@ -37,10 +36,8 @@ const Acesso = () => {
   return (
     <C.Container>
       <C.ContainerContent>
-
         <C.LogoTubarao src={imagemTubarao} alt="Tubarão dando olá" />
-        <C.containerLabel>
-
+        <C.ContainerComponents>
           <C.Label>Acesso</C.Label>
           <C.Content>
             <Input
@@ -78,7 +75,7 @@ const Acesso = () => {
               </C.Strong>
             </C.LabelCadastro>
           </C.Content>
-        </C.containerLabel>
+        </C.ContainerComponents>
 
       </C.ContainerContent>
     </C.Container>

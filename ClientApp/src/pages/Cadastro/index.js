@@ -103,12 +103,11 @@ const Cadastro = () => {
                   id='accept-terms'
                   />
 
-                  <label for='accept-terms'
+                  <label htmlFor='accept-terms'
                   ><p>Li e entendi os 
                     <a href="/termos"> Termos de Contrato</a> <br /> de criação de conta e concordo <br /> em prosseguir com o processo.
                   </p> 
                   </label>
-
             </C.CheckBox>
 
           <S.ButtonPrimario text="Cadastrar" onClick={handleCadastra}>Cadastrar</S.ButtonPrimario>
