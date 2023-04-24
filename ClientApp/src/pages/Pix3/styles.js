@@ -33,20 +33,22 @@ width: 50vw;
 height: 85vh;
 
 border-radius: 20px;
-padding: 20px;
+padding: 40px;
 
 .ButtonBack{
     background:none;
     border: none;
+    
 }
 .DivButtonNext{
     display: flex;
     justify-content: end;
+    margin-right: 60px;
 }
+
 .ButtonNext{
     background:none;
-    border: none;  
-    
+    border: none;     
 }
 
 `;
@@ -73,6 +75,20 @@ line-height: 2;
 
     color: #000000;
     margin-bottom: 10px;
+}
+
+.ConjuntoDeInputs{
+display: flex;
+gap: 20px;
+}
+
+.input{
+    margin-top: 16px;
+  height: 56px;
+  width: 70px;
+  background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
+border: 1.5px solid #1B85C3;
+border-radius: 39px;
 }
 
 

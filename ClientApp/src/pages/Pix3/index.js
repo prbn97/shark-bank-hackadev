@@ -31,13 +31,23 @@ function Pix3() {
 
         <C.Conteudo>
           <h2 className='Titulo'>Digite a senha de 4 digítos do cartão</h2>
-          <p className='SubTitulo'>Saldo disponível em conta de R$ 0,00</p>
+          <div className='ConjuntoDeInputs'>
 
-          <Input className='Input'
-            type="text"
-            placeholder="Digite a chave pix aqui"
-          
-          />
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+          </div>
+
+         
 
         </C.Conteudo>
 
