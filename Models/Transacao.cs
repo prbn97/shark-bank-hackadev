@@ -14,10 +14,10 @@ namespace sharp_coders_hackadev.Models;
 public class Transacao
 {
     public string Id { get; set; }
-    public DateTime DataTransacao { get; set; }
-    public string TipoTransacao { get; set; }
-    public decimal ValorTransacao { get; set; }
-
-    public string ClienteId { get; set; }
+    public string TransacaoHashCliente { get; set; }
     public Cliente Cliente { get; set; }
+    public DateTime TransacaoData { get; set; }
+    public string TransacaoOrigem { get; set; }
+    public string TransacaoTipo { get; set; }
+    public decimal TransacaoValor { get; set; }
 }

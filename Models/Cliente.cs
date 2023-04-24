@@ -14,8 +14,9 @@ namespace sharp_coders_hackadev.Models;
 public class Cliente
 {
     public string Id { get; set; }
-    public string NomeCliente { get; set; }
-    public string EmailCliente { get; set; }
-    public string CelularCliente { get; set; }
-    public bool AtivoCliente { get; set; }
+    public string ClienteCpf { get; set; }
+    public string ClienteNome { get; set; }
+    public string ClienteEmail { get; set; }
+    public string ClienteCelular { get; set; }
+    public bool? ClienteAtivo { get; set; }
 }

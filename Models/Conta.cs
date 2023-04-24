@@ -14,12 +14,10 @@ namespace sharp_coders_hackadev.Models;
 public class Conta
 {
     public string Id { get; set; }
-    public string TipoConta { get; set; }
-    public decimal SaldoConta { get; set; }
-
-    public string ClienteId { get; set; }
+    public string ContaHashCliente { get; set; }
     public Cliente Cliente { get; set; }
-
-    public string AgenciaId { get; set; }
-    public Agencia Agencia { get; set; }    
+    public int ContaIdAgencia { get; set; }
+    public Agencia Agencia { get; set; }
+    public string ContaTipo { get; set; }
+    public decimal ContaSaldo { get; set; }
 }

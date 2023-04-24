@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using sharp_coders_hackadev.Data;
 
@@ -10,9 +11,11 @@ using sharp_coders_hackadev.Data;
 namespace sharp_coders_hackadev.Migrations
 {
     [DbContext(typeof(SharkBankDbContext))]
-    partial class SharkBankDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230424131328_SharkBankV202")]
+    partial class SharkBankV202
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

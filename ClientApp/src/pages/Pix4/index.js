@@ -3,7 +3,6 @@ import * as C from './styles'
 import UserIcon from '../../assets/images/user-icon.svg'
 import NotificationButton from '../../assets/images/notification-button.svg'
 
-import Input from '../../components/Input';
 import ButtonBack from '../../assets/images/ButtonBack.svg'
 import ButtonNext from '../../assets/images/ButtonNext.svg'
 
@@ -37,8 +36,8 @@ function Pix4() {
 
         <C.Conteudo>
 
-            <img className='ImagemTubarao' src={HappysShark}></img>
-          
+            <img className='ImagemTubarao' alt='imagem de um tubarao fofinho' src={HappysShark}></img>
+         
             <div className='DivConteudo'>
 
                 <h2 className='Titulo'>Transferência realizada!</h2>

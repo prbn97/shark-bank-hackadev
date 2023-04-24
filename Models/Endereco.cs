@@ -17,13 +17,12 @@ namespace sharp_coders_hackadev.Models;
 public class Endereco
 {
     public string Id { get; set; }
-    public int CepEndereco { get; set; }
-    public string LogradouroEndereco { get; set; }
-    public int NumeroEndereco { get; set; }
-    public string ComplementoEndereco { get; set; }
-    public string BairroEndereco { get; set; }
-    public string EstadoEndereco { get; set; }
-
-    public string ClienteId { get; set; }
+    public string EnderecoHashCliente { get; set; }
     public Cliente Cliente { get; set; }
+    public int EnderecoCep { get; set; }
+    public string EnderecoLogradouro { get; set; }
+    public int EnderecoNumero { get; set; }
+    public string EnderecoComplemento { get; set; }
+    public string EnderecoBairro { get; set; }
+    public string EnderecoEstado { get; set; }
 }

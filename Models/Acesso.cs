@@ -13,10 +13,7 @@ namespace sharp_coders_hackadev.Models;
 public class Acesso
 {
     public string Id { get; set; }
-    public string CpfAcesso { get; set; }
-    public string SenhaAcesso { get; set; }
-
-    public string ClienteId { get; set; }
+    public string AcessoHashCliente { get; set; }
     public Cliente Cliente { get; set; }
 
 }

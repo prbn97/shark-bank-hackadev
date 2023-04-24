@@ -30,7 +30,7 @@ namespace sharp_coders_hackadev.Controllers
 
         // GET: api/Agencia/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Agencia>> GetAgencia(string id)
+        public async Task<ActionResult<Agencia>> GetAgencia(int id)
         {
             var agencia = await _context.Agencias.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace sharp_coders_hackadev.Controllers
         // PUT: api/Agencia/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAgencia(string id, Agencia agencia)
+        public async Task<IActionResult> PutAgencia(int id, Agencia agencia)
         {
             if (id != agencia.Id)
             {
@@ -79,28 +79,14 @@ namespace sharp_coders_hackadev.Controllers
         public async Task<ActionResult<Agencia>> PostAgencia(Agencia agencia)
         {
             _context.Agencias.Add(agencia);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (AgenciaExists(agencia.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAgencia", new { id = agencia.Id }, agencia);
         }
 
         // DELETE: api/Agencia/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAgencia(string id)
+        public async Task<IActionResult> DeleteAgencia(int id)
         {
             var agencia = await _context.Agencias.FindAsync(id);
             if (agencia == null)
@@ -114,7 +100,7 @@ namespace sharp_coders_hackadev.Controllers
             return NoContent();
         }
 
-        private bool AgenciaExists(string id)
+        private bool AgenciaExists(int id)
         {
             return _context.Agencias.Any(e => e.Id == id);
         }

@@ -10,6 +10,6 @@ namespace sharp_coders_hackadev.Models;
 
 public class Agencia
 {
-    public string Id { get; set; }
-    public string NomeAgencia { get; set; }
+    public int Id { get; set; }
+    public string AgenciaNome { get; set; }
 }
