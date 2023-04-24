@@ -18,17 +18,33 @@ color: white;
 }
 `;
 
-export const Search = styled.div`
-  background-color: red;
+
+
+export const Input = styled.input`
+  background: linear-gradient(112.48deg, rgba(27, 133, 195, 0.3) 6.31%, rgba(255, 255, 255, 0) 98.51%);
+  border-radius: 5px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border: 1px solid #1B85C3;
+  border-radius: 26px;
+  outline: none;
+  padding: 1rem 1.25rem;
+  width: 20%;
+  align-items: center;
+  /*background-color: red;*/
+
+  ::placeholder {
+    font-size: .85rem;
+  };
 
 `;
 
 export const ContainerHistorico = styled.div`
  .Trasnferencia{
 
-    margin-top: 20px;
+    margin-top: 3rem;
 
-    gap: 30px;
+    gap: 2rem;
     width: 50vw;
 
     display: flex;
