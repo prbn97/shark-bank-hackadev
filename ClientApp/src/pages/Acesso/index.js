@@ -36,53 +36,51 @@ const Acesso = () => {
 
   return (
     <C.Container>
-        <C.containerContent>
-          
-          <C.LogoTubarao src={imagemTubarao} alt="Tubarão dando olá" />
-          <C.containerLabel>
+      <C.ContainerContent>
 
-            <C.Label>Acesso</C.Label>
-            <C.Content>
-              <Input
-                type="text"
-                placeholder="Digite aqui o seu CPF"
-                value={cpf}
-                onChange={(error) => [setCPF(error.target.value), setError("")]}
-                />
-              <Input
-                type="password"
-                placeholder="Digite aqui a sua senha"
-                value={senha}
-                
-                onChange={(error) => [setSenha(error.target.value), setError("")]}
-                />
-              <C.LabelError>{error}</C.LabelError>
+        <C.LogoTubarao src={imagemTubarao} alt="Tubarão dando olá" />
+        <C.containerLabel>
 
-              <C.ContentAccountPassword>
+          <C.Label>Acesso</C.Label>
+          <C.Content>
+            <Input
+              type="text"
+              placeholder="Digite aqui o seu CPF"
+              value={cpf}
+              onChange={(error) => [setCPF(error.target.value), setError("")]}
+            />
+            <Input
+              type="password"
+              placeholder="Digite aqui a sua senha"
+              value={senha}
 
-                <C.RememberAccount>
-                  <input type='checkbox' name="Lembrar conta"></input>
-                  <p className='TextRememberAccount'>Lembrar conta </p>
+              onChange={(error) => [setSenha(error.target.value), setError("")]}
+            />
+            <C.LabelError>{error}</C.LabelError>
 
-                </C.RememberAccount>
+            <C.ContentAccountPassword>
 
-                <C.ForgetPassword>
-                  <a href='/redefinir'> Esqueci a senha</a>
+              <C.RememberAccount>
+                <input type='checkbox' name="Lembrar conta"></input>
+                <p className='TextRememberAccount'>Lembrar conta </p>
+              </C.RememberAccount>
 
-                </C.ForgetPassword>
+              <C.ForgetPassword>
+                <Link to="/redefinir">&nbsp; Esqueci a senha</Link>
+              </C.ForgetPassword>
 
-              </C.ContentAccountPassword>
-              <S.ButtonPrimario text="Acessar" onClick={handleAcesso}>Acessar</S.ButtonPrimario>
-              <C.LabelCadastro>
-                Ainda não é cliente?
-                <C.Strong>
-                  <Link to="/cadastro">&nbsp;Cadastre-se</Link>
-                </C.Strong>
-              </C.LabelCadastro>
-            </C.Content>
-          </C.containerLabel>
+            </C.ContentAccountPassword>
+            <S.ButtonPrimario text="Acessar" onClick={handleAcesso}>Acessar</S.ButtonPrimario>
+            <C.LabelCadastro>
+              Ainda não é cliente?
+              <C.Strong>
+                <Link to="/cadastro">&nbsp;Cadastre-se</Link>
+              </C.Strong>
+            </C.LabelCadastro>
+          </C.Content>
+        </C.containerLabel>
 
-        </C.containerContent>
+      </C.ContainerContent>
     </C.Container>
   );
 };

@@ -50,27 +50,44 @@ export const AuthProvider = ({ children }) => {
         console.log(clienteToken)
 
         const cliente = {
-            // cpfAcesso: cpf,
             id: clienteToken,
             nomeCliente: nomeCompleto,
             emailCliente: email,
             celularCliente: celular,
             ativoCliente: true
-            // senhaAcesso: senha
         };
 
-        const response = await fetch('https://localhost:7201/api/Cliente', {
+        const acesso = {
+            id: clienteToken + id,
+            clienteId: clienteToken,
+            cpfAcesso: cpf,
+            senhaAcesso: senha,
+        }
+
+        const responseCliente = await fetch('https://localhost:7201/api/Cliente', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(cliente)
-        });
+        });   
 
-        if (!response.ok) {
+        if (!responseCliente.ok) {
             return 'Ocorreu um erro ao realizar o cadastro';
         }
 
+        const responseAcesso = await fetch('https://localhost:7201/api/Acesso', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify(acesso)
+        });
+
+        if (!responseAcesso.ok) {
+            return 'Ocorreu um erro ao realizar o cadastro';
+        }
 
     };
 

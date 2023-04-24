@@ -25,7 +25,7 @@ export const LogoTubarao = styled.img`
 
 `;
 
-export const containerLabel = styled.div`
+export const ContainerLabel = styled.div`
 
   display: flex;
   flex-direction: column;
@@ -90,8 +90,7 @@ display: flex;
 `;
 
 
-export const ForgetPassword = styled.div`
-  
+export const ForgetPassword = styled.a`
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -99,6 +98,7 @@ export const ForgetPassword = styled.div`
   color: #345170;
   text-decoration-line: underline;
 `;
+
 export const Strong = styled.strong`
   cursor: pointer;
   a {
