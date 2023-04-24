@@ -8,7 +8,7 @@ import ButtonBack from '../../assets/images/ButtonBack.svg'
 import ButtonNext from '../../assets/images/ButtonNext.svg'
 
 
-function Pix() {
+function Pix3() {
   return (
     <C.Container>
       
@@ -30,14 +30,24 @@ function Pix() {
 
 
         <C.Conteudo>
-          <h2 className='Titulo'>Qual é o valor do Pix?</h2>
-          <p className='SubTitulo'>Saldo disponível em conta de R$ 0,00</p>
+          <h2 className='Titulo'>Digite a senha de 4 digítos do cartão</h2>
+          <div className='ConjuntoDeInputs'>
 
-          <Input className='Input'
-            type="text"
-            placeholder="Digite aqui o valor da Pix"
-          
-          />
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+            <input className='input'>
+            </input>
+
+          </div>
+
+         
 
         </C.Conteudo>
 
@@ -60,4 +70,4 @@ function Pix() {
   )
 }
 
-export default Pix
+export default Pix3;

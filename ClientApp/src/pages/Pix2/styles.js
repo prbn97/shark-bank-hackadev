@@ -45,10 +45,7 @@ padding: 20px;
 }
 .ButtonNext{
     background:none;
-    border: none;
-
-    
-
+    border: none;  
     
 }
 
@@ -56,7 +53,7 @@ padding: 20px;
 
 export const Conteudo = styled.div`
 width: 50%;
-margin: 104px;
+margin: 70px;
 line-height: 2;
 
 .Titulo{   
