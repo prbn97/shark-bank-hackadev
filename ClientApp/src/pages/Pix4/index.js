@@ -7,8 +7,11 @@ import Input from '../../components/Input';
 import ButtonBack from '../../assets/images/ButtonBack.svg'
 import ButtonNext from '../../assets/images/ButtonNext.svg'
 
+import HappysShark from '../../assets/images/happyshark.svg'
 
-function Pix() {
+import * as S from '../../components/Botao/styles'
+
+function Pix4() {
   return (
     <C.Container>
       
@@ -22,24 +25,32 @@ function Pix() {
       </C.User>
 
       <C.Containt>
+        <div className='DivButtonBack'>
 
-        <button class="ButtonBack" type="button">
-          <img src={ButtonBack} alt='Botao de voltar'/>
-          {/* <img src={UserIcon} alt="Descrição da imagem"> */}
-        </button>
+            <button class="ButtonBack" type="button">
+            <img src={ButtonBack} alt='Botao de voltar'/>
+            {/* <img src={UserIcon} alt="Descrição da imagem"> */}
+            </button>
+        </div>
+
 
 
         <C.Conteudo>
-          <h2 className='Titulo'>Qual é o valor do Pix?</h2>
-          <p className='SubTitulo'>Saldo disponível em conta de R$ 0,00</p>
 
-          <Input className='Input'
-            type="text"
-            placeholder="Digite aqui o valor da Pix"
+            <img className='ImagemTubarao' src={HappysShark}></img>
           
-          />
+            <div className='DivConteudo'>
+
+                <h2 className='Titulo'>Transferência realizada!</h2>
+                <p>Para mais detalhes veja o histórico de transação da sua conta</p>
+
+            </div>
+
+            
 
         </C.Conteudo>
+
+        <S.ButtonPrimario text="Voltar" >Voltar</S.ButtonPrimario>
 
         <div class="DivButtonNext">
 
@@ -60,4 +71,4 @@ function Pix() {
   )
 }
 
-export default Pix
+export default Pix4;

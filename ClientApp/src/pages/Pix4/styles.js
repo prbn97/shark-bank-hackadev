@@ -29,35 +29,58 @@ export const Containt = styled.div`
 
 background-color: #D9D9D9;
 
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: space-around;
+
 width: 50vw;
 height: 85vh;
 
 border-radius: 20px;
-padding: 20px;
+padding: 40px;
+
+.DivButtonBack{
+    display: flex;
+    align-items: start;
+    width: 100%;
+}
 
 .ButtonBack{
     background:none;
     border: none;
+    
 }
 .DivButtonNext{
+    width: 100%;
     display: flex;
     justify-content: end;
+    
 }
+
 .ButtonNext{
     background:none;
-    border: none;
-
-    
-
-    
+    border: none;     
 }
 
 `;
 
 export const Conteudo = styled.div`
-width: 50%;
-margin: 104px;
-line-height: 2;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 70%;
+
+.ImagemTubarao{
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25%;
+    z-index: 0;
+}
+
+
 
 .Titulo{   
     font-style: normal;
@@ -65,18 +88,21 @@ line-height: 2;
     font-size: 36px;
     line-height: 44px;
     color: #111B59;
+    text-align: center;
 
 }
-.SubTitulo{
-    
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
 
-    color: #000000;
-    margin-bottom: 10px;
+.DivConteudo{
+    background-color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 1;
+
 }
+
+
+
 
 
 
