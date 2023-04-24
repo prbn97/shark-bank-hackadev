@@ -20,13 +20,35 @@ namespace sharp_coders_hackadev.Controllers
         {
             _context = context;
         }
-
-        // GET: api/Acesso
         [HttpGet]
+
         public async Task<ActionResult<IEnumerable<Acesso>>> GetAcessos()
         {
             return await _context.Acessos.ToListAsync();
         }
+
+        [HttpPost("Auth")]
+        public async Task<IActionResult> Acesso([FromBody] Acesso acesso)
+        {
+            bool existeAcesso = await AcessoExiste(acesso);
+
+            if (existeAcesso)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        private async Task<bool> AcessoExiste(Acesso acesso)
+        {
+            return await _context.Acessos
+                .AnyAsync(acessos => acessos.Id == acesso.Id);
+        }
+
+        // GET: api/Acesso
+
 
         // GET: api/Acesso/5
         [HttpGet("{id}")]
@@ -42,36 +64,36 @@ namespace sharp_coders_hackadev.Controllers
             return acesso;
         }
 
-        // PUT: api/Acesso/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAcesso(string id, Acesso acesso)
-        {
-            if (id != acesso.Id)
-            {
-                return BadRequest();
-            }
+        // // PUT: api/Acesso/5
+        // // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // [HttpPut("{id}")]
+        // public async Task<IActionResult> PutAcesso(string id, Acesso acesso)
+        // {
+        //     if (id != acesso.Id)
+        //     {
+        //         return BadRequest();
+        //     }
 
-            _context.Entry(acesso).State = EntityState.Modified;
+        //     _context.Entry(acesso).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AcessoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //     try
+        //     {
+        //         await _context.SaveChangesAsync();
+        //     }
+        //     catch (DbUpdateConcurrencyException)
+        //     {
+        //         if (!AcessoExists(id))
+        //         {
+        //             return NotFound();
+        //         }
+        //         else
+        //         {
+        //             throw;
+        //         }
+        //     }
 
-            return NoContent();
-        }
+        //     return NoContent();
+        // }
 
         // POST: api/Acesso
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -98,21 +120,21 @@ namespace sharp_coders_hackadev.Controllers
             return CreatedAtAction("GetAcesso", new { id = acesso.Id }, acesso);
         }
 
-        // DELETE: api/Acesso/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAcesso(string id)
-        {
-            var acesso = await _context.Acessos.FindAsync(id);
-            if (acesso == null)
-            {
-                return NotFound();
-            }
+        // // DELETE: api/Acesso/5
+        // [HttpDelete("{id}")]
+        // public async Task<IActionResult> DeleteAcesso(string id)
+        // {
+        //     var acesso = await _context.Acessos.FindAsync(id);
+        //     if (acesso == null)
+        //     {
+        //         return NotFound();
+        //     }
 
-            _context.Acessos.Remove(acesso);
-            await _context.SaveChangesAsync();
+        //     _context.Acessos.Remove(acesso);
+        //     await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //     return NoContent();
+        // }
 
         private bool AcessoExists(string id)
         {

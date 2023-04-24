@@ -29,8 +29,10 @@ const Acesso = () => {
     console.log(response);
 
     switch (response) {
+
       case 200:
         console.log("Acesso permitido");
+        navigate('/conta');
         break;
       case 400:
         setError("CPF ou senha inválidas");
@@ -47,10 +49,8 @@ const Acesso = () => {
       default:
         setError("Erro desconhecido");
         break;
-
     }
 
-    navigate('/conta');
   };
 
   return (

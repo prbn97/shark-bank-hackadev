@@ -98,6 +98,30 @@ namespace sharp_coders_hackadev.Controllers
             return CreatedAtAction("GetCliente", new { id = cliente.Id }, cliente);
         }
 
+        // POST: api/Cliente
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
+        [HttpPost("Token")]
+        public async Task<IActionResult> Acesso([FromBody] Cliente cliente)
+        {
+            bool existeAcesso = await AcessoExiste(cliente);
+
+            if (existeAcesso)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        private async Task<bool> AcessoExiste(Cliente cliente)
+        {
+            return await _context.Clientes
+                .AnyAsync(acesso => acesso.Id == acesso.Id);
+        }
+
         // DELETE: api/Cliente/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(string id)

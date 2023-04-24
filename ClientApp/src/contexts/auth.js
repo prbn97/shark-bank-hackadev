@@ -22,56 +22,79 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const acessa = async (cpf, senha) => {
-        const response = await fetch(`https://localhost:7201/api/Acesso`, {
+
+        const hashAuth = criptoHash(cpf + senha);
+
+        const responseAuth = await fetch(`https://localhost:7201/api/Acesso/Auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ cpfAcesso: cpf, senhaAcesso: senha })
+            body: JSON.stringify({ id: hashAuth })
         });
 
-        if (response.ok) {
+        console.log(responseAuth);
+        console.log(hashAuth);
 
-            const clienteToken = Math.random().toString(36).substring(2);
-            localStorage.setItem("cliente_token", JSON.stringify({ cpf, token: clienteToken }));
+        alert("Fez o post via Auth");
 
-            setCliente(cpf, senha);
+        if (responseAuth.ok) {
+            const responseToken = await fetch(`https://localhost:7201/api/Cliente/Token`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: hashAuth })
+            });
 
-            if (cliente) {
-                const clienteToken = Math.random().toString(36).substring(2);
-                localStorage.setItem("cliente_token", JSON.stringify({ cpf, token: clienteToken }));
-                setCliente(cpf, senha);
-                return response.status;
+            alert("Fez o post via Token");
+
+            if (responseToken.ok) {
+
+                console.log(responseToken);
+
+                alert("Fez o post via Token e deu ok");
+
+                alert(cliente);
+
+                if (cliente == undefined) {
+                    const clienteToken = criptoHash(cpf);
+
+                    localStorage.setItem("cliente_token", JSON.stringify({ token: clienteToken }));
+                    setCliente(cpf, senha);
+
+                    return responseToken.status;
+                } else {
+                    return responseToken.status;
+                }
+            } else {
+                return responseToken.status;
             }
         } else {
-            return response.status;
-        }
+            alert("Não fez o post via Auth");
+            return responseAuth.status;
+        };
     };
-
-
-
     //cpf, nomeCompleto, email, celular, senha
     const cadastra = async (cpf, nomeCompleto, email, celular, senha) => {
 
-        const clienteToken = geraHash();
-
-        console.log(clienteToken)
+        const clienteHash = criptoHash(nomeCompleto + cpf);
 
         const cliente = {
-            id: clienteToken,
-            nomeCliente: nomeCompleto,
-            emailCliente: email,
-            celularCliente: celular,
-            ativoCliente: true
+            id: clienteHash,
+            clienteCpf: cpf,
+            clienteNome: email,
+            clienteEmail: celular,
+            clienteCelular: celular,
+            clienteAtivo: true
         };
 
-        const hashAcesso = geraHash();
+        const hashAcesso = criptoHash(cpf + senha);
 
         const acesso = {
             id: hashAcesso,
-            clienteId: clienteToken,
-            cpfAcesso: cpf,
-            senhaAcesso: senha,
+            acessoHashCliente: clienteHash,
+            cliente: null
         }
 
         const responseCliente = await fetch('https://localhost:7201/api/Cliente', {
@@ -111,12 +134,13 @@ export const AuthProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     );
+
+    function criptoHash(string) {
+        const CryptoJS = require("crypto-js");
+        return CryptoJS.SHA256(string).toString(CryptoJS.enc.Hex);
+    }
+
 };
 
-function geraHash() {
-    let clienteToken;
-    do {
-        clienteToken = Math.random().toString(36).substring(7);
-    } while (clienteToken.length < 5);
-    return clienteToken;
-}
+
+
